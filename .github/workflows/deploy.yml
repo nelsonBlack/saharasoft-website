@@ -35,12 +35,22 @@ jobs:
       - name: Deploy to VPS
         run: |
           set -euo pipefail
-          rsync -avz --delete \
+          rsync -avzc --delete --delete-after --stats \
             --exclude='.git' \
             --exclude='.github' \
             --exclude='.DS_Store' \
             -e ssh \
             ./ vps:/var/www/caddy-prod/site/saharasoft.org/
+
+      - name: Verify deployment
+        run: |
+          set -euo pipefail
+          DEPLOYED_TITLE=$(ssh vps "grep -o '<title>.*</title>' /var/www/caddy-prod/site/saharasoft.org/index.html")
+          echo "Deployed title: $DEPLOYED_TITLE"
+          if [[ "$DEPLOYED_TITLE" != *"Saharasoft Solutions"* ]]; then
+            echo "Deployment verification failed: title missing from deployed index.html"
+            exit 1
+          fi
 
       - name: Reload Caddy
         run: |
