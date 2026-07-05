@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Products & Software We Build | Saharasoft Solutions</title>
+  <meta name="description" content="Live software products Saharasoft Solutions has built for East African businesses: water billing, logistics, events, real estate, and operations tools." />
+  <meta name="author" content="Saharasoft Solutions LTD" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://saharasoft.org/products/index.html" />
+  <link rel="shortcut icon" href="../webdeveloper/images/favicon.ico" />
+
+  <meta property="og:title" content="Products & Software We Build | Saharasoft Solutions" />
+  <meta property="og:description" content="Live software products built for East African businesses." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://saharasoft.org/products/index.html" />
+  <meta property="og:site_name" content="Saharasoft Solutions" />
+  <meta property="og:locale" content="en_KE" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Products & Software We Build | Saharasoft Solutions" />
+  <meta name="twitter:description" content="Live software products built for East African businesses." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../css/design-system.css" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Saharasoft Solutions Products",
+      "itemListElement": [
+        { "@type": "SoftwareApplication", "name": "Arbec", "applicationCategory": "BusinessApplication", "url": "https://arbecapp.saharasoftsolutions.com" },
+        { "@type": "SoftwareApplication", "name": "TallyDue", "applicationCategory": "BusinessApplication", "url": "https://waterbiller.app" },
+        { "@type": "SoftwareApplication", "name": "Inbuildr", "applicationCategory": "BusinessApplication", "url": "https://inbuildr.com" },
+        { "@type": "SoftwareApplication", "name": "Baylink", "applicationCategory": "BusinessApplication", "url": "https://getbaylink.com" },
+        { "@type": "SoftwareApplication", "name": "GarageOS", "applicationCategory": "BusinessApplication", "url": "https://staging-garage.saharasoft.org" },
+        { "@type": "SoftwareApplication", "name": "Realator", "applicationCategory": "BusinessApplication", "url": "https://realator.api.saharasoft.org" },
+        { "@type": "SoftwareApplication", "name": "Courier", "applicationCategory": "BusinessApplication", "url": "https://courier.saharasoft.org" },
+        { "@type": "SoftwareApplication", "name": "Messaging", "applicationCategory": "BusinessApplication", "url": "https://messaging.prod.saharasoftsolutions.com" },
+        { "@type": "SoftwareApplication", "name": "LakeVictoria100", "applicationCategory": "BusinessApplication", "url": "https://lakevictoria100.com" },
+        { "@type": "SoftwareApplication", "name": "Documenter", "applicationCategory": "DeveloperApplication", "url": "https://tools.saharasoftsolutions.com" }
+      ]
+    }
+  </script>
+
+  <style>
+    .hero { padding: calc(72px + var(--space-24)) 0 var(--space-24); }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-bottom: var(--space-12);
+    }
+    .filter-btn[aria-pressed="true"] {
+      background: var(--color-accent);
+      color: var(--color-white);
+      border-color: var(--color-accent);
+    }
+    .filter-btn[aria-pressed="true"]:hover {
+      background: var(--color-accent-dark);
+      border-color: var(--color-accent-dark);
+    }
+    .product-tile[hidden] {
+      display: none;
+    }
+    .product-tile-image {
+      aspect-ratio: 16 / 10;
+      background: var(--color-surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: var(--color-muted);
+      font-size: var(--text-sm);
+    }
+    .product-tile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .footer-grid {
+      grid-template-columns: 2fr repeat(4, 1fr);
+    }
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="visually-hidden" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">Saharasoft Solutions</a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="./index.html" aria-current="page">Products</a>
+        <a href="../software-development-services.html">Services</a>
+        <a href="../case-studies/index.html">Case Studies</a>
+        <a href="../about.html">About</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero bg-surface">
+      <div class="container">
+        <h1 class="hero-title">Products we've built for East African businesses.</h1>
+        <p class="hero-lead">
+          Most of these products are running live today. Each one started with a specific workflow that existing software could not handle.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar" role="group" aria-label="Filter products by category">
+          <button class="btn btn-secondary filter-btn" data-filter="all" aria-pressed="true">All</button>
+          <button class="btn btn-secondary filter-btn" data-filter="water" aria-pressed="false">Water & Utilities</button>
+          <button class="btn btn-secondary filter-btn" data-filter="events" aria-pressed="false">Events & Conferences</button>
+          <button class="btn btn-secondary filter-btn" data-filter="logistics" aria-pressed="false">Logistics & Transport</button>
+          <button class="btn btn-secondary filter-btn" data-filter="realestate" aria-pressed="false">Real Estate</button>
+          <button class="btn btn-secondary filter-btn" data-filter="productivity" aria-pressed="false">Productivity</button>
+          <button class="btn btn-secondary filter-btn" data-filter="communications" aria-pressed="false">Communications</button>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+          <article class="product-tile product-tile-large" data-category="events">
+            <a href="https://arbecapp.saharasoftsolutions.com" class="card-link">
+              <div class="product-tile-image">
+                <img src="../webdeveloper/images/home_webdeveloper_pic10.png" alt="Arbec event management dashboard" loading="lazy" />
+              </div>
+              <div class="product-tile-body">
+                <p class="product-tile-meta">Events & Conferences</p>
+                <h3 class="product-tile-title">Arbec</h3>
+                <p class="product-tile-desc">Conference management that replaces spreadsheets, WhatsApp chains, and printed schedules for event organisers and attendees.</p>
+                <span class="text-accent">Visit arbecapp.saharasoftsolutions.com →</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="product-tile product-tile-large" data-category="water">
+            <a href="https://waterbiller.app" class="card-link">
+              <div class="product-tile-image">
+                <img src="../webdeveloper/images/home_webdeveloper_pic21.png" alt="TallyDue water utility billing interface" loading="lazy" />
+              </div>
+              <div class="product-tile-body">
+                <p class="product-tile-meta">Water & Utilities</p>
+                <h3 class="product-tile-title">TallyDue</h3>
+                <p class="product-tile-desc">Billing, meter reading, and customer management built for water utilities that need to collect reliably and report accurately.</p>
+                <span class="text-accent">Visit waterbiller.app →</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="product-tile product-tile-small" data-category="productivity">
+            <a href="https://inbuildr.com" class="card-link">
+              <div class="product-tile-image">
+                <img src="../webdeveloper/images/home_webdeveloper_pic15.png" alt="Inbuildr productivity platform" loading="lazy" />
+              </div>
+              <div class="product-tile-body">
+                <p class="product-tile-meta">Productivity / Construction</p>
+                <h3 class="product-tile-title">Inbuildr</h3>
+                <p class="product-tile-desc">Project and operations tracking for construction and field teams.</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="product-tile product-tile-small" data-category="logistics">
+            <a href="https://getbaylink.com" class="card-link">
+              <div class="product-tile-image">
+                <img src="../webdeveloper/images/home_webdeveloper_pic16.png" alt="Baylink logistics platform" loading="lazy" />
+              </div>
+              <div class="product-tile-body">
+                <p class="product-tile-meta">Logistics & Transport</p>
+                <h3 class="product-tile-title">Baylink</h3>
+                <p class="product-tile-desc">Connects shippers and transporters across East African corridors.</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="product-tile product-tile-small" data-category="logistics">
+            <a href="https://staging-garage.saharasoft.org" class="card-link">
+              <div class="product-tile-image">
+                <img src="../webdeveloper/images/home_webdeveloper_pic11.png" alt="GarageOS fleet dashboard" loading="lazy" />
+              </div>
+              <div class="product-tile-body">
+                <p class="product-tile-meta">Fleet & Garage</p>
+                <h3 class="product-tile-title">GarageOS</h3>
+                <p class="product-tile-desc">Workshop and fleet operations for garages managing multiple vehicles.</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="product-tile product-tile-small" data-category="realestate">
+            <a href="https://realator.api.saharasoft.org" class="card-link">
+              <div class="product-tile-image">
+                <img src="../webdeveloper/images/home_webdeveloper_pic12.png" alt="Realator real estate data tool" loading="lazy" />
+              </div>
+              <div class="product-tile-body">
+                <p class="product-tile-meta">Real Estate</p>
+                <h3 class="product-tile-title">Realator</h3>
+                <p class="product-tile-desc">Property data and listings API for real-estate businesses.</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="product-tile product-tile-small" data-category="logistics">
+            <a href="https://courier.saharasoft.org" class="card-link">
+              <div class="product-tile-image">
+                <img src="../webdeveloper/images/home_webdeveloper_pic13.png" alt="Courier delivery platform" loading="lazy" />
+              </div>
+              <div class="product-tile-body">
+                <p class="product-tile-meta">Logistics</p>
+                <h3 class="product-tile-title">Courier</h3>
+                <p class="product-tile-desc">Last-mile delivery and dispatch management for courier services.</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="product-tile product-tile-small" data-category="communications">
+            <a href="https://messaging.prod.saharasoftsolutions.com" class="card-link">
+              <div class="product-tile-image">
+                <img src="../webdeveloper/images/home_webdeveloper_pic14.png" alt="Messaging service portal" loading="lazy" />
+              </div>
+              <div class="product-tile-body">
+                <p class="product-tile-meta">Communications</p>
+                <h3 class="product-tile-title">Messaging</h3>
+                <p class="product-tile-desc">SMS and notification backend used by multiple products.</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="product-tile product-tile-small" data-category="events">
+            <a href="https://lakevictoria100.com" class="card-link">
+              <div class="product-tile-image">
+                <img src="../webdeveloper/images/home_webdeveloper_pic1.png" alt="LakeVictoria100 event platform" loading="lazy" />
+              </div>
+              <div class="product-tile-body">
+                <p class="product-tile-meta">Events / Community</p>
+                <h3 class="product-tile-title">LakeVictoria100</h3>
+                <p class="product-tile-desc">Community event platform built around the Lake Victoria 100 race.</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="product-tile product-tile-small" data-category="productivity">
+            <a href="https://tools.saharasoftsolutions.com" class="card-link">
+              <div class="product-tile-image">
+                <img src="../webdeveloper/images/home_webdeveloper_pic2.png" alt="Documenter tools" loading="lazy" />
+              </div>
+              <div class="product-tile-body">
+                <p class="product-tile-meta">Productivity / Developer</p>
+                <h3 class="product-tile-title">Documenter</h3>
+                <p class="product-tile-desc">Internal document generation and developer utilities.</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark text-center">
+      <div class="container container-narrow">
+        <h2 class="text-white">Need a custom product?</h2>
+        <p class="text-white" style="opacity: 0.8; margin-bottom: var(--space-8);">
+          Tell us what you are building and we will help you plan the right approach.
+        </p>
+        <a href="../contact.html" class="btn btn-light btn-large">Tell us about your project</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">Saharasoft Solutions</div>
+          <p style="color: rgba(248, 250, 252, 0.7); font-size: var(--text-sm); max-width: 320px;">
+            Custom software, product design, and system integration for East African businesses.
+          </p>
+          <p style="margin-top: var(--space-4);">
+            <a href="mailto:nelson@saharasoftsolutions.com">nelson@saharasoftsolutions.com</a><br />
+            <a href="tel:+254721137000">+254 721 137000</a><br />
+            <span style="color: rgba(248, 250, 252, 0.6); font-size: var(--text-sm);">Nairobi, Kenya</span>
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Company</h3>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../software-development-services.html">Services</a></li>
+            <li><a href="../case-studies/index.html">Case Studies</a></li>
+            <li><a href="../blog/index.html">Blog</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Products</h3>
+          <ul>
+            <li><a href="https://arbecapp.saharasoftsolutions.com">Arbec</a></li>
+            <li><a href="https://waterbiller.app">TallyDue</a></li>
+            <li><a href="https://inbuildr.com">Inbuildr</a></li>
+            <li><a href="https://getbaylink.com">Baylink</a></li>
+            <li><a href="https://staging-garage.saharasoft.org">GarageOS</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Resources</h3>
+          <ul>
+            <li><a href="../pricing.md">Pricing</a></li>
+            <li><a href="../products.md">Product catalog</a></li>
+            <li><a href="../llms.txt">AI overview</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 class="footer-col-title">Legal</h3>
+          <ul>
+            <li><a href="../webdeveloper/terms_privacy_miradiapp.html">Inbuildr Privacy Policy</a></li>
+            <li><a href="../webdeveloper/terms_privacy_watermeter.html">TallyDue Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Saharasoft Solutions LTD. All rights reserved.</p>
+        <p>Serving East Africa from Nairobi, Kenya.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.mobile-menu-toggle');
+      var nav = document.getElementById('main-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          var isOpen = nav.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', String(isOpen));
+        });
+      }
+
+      var filters = document.querySelectorAll('[data-filter]');
+      var items = document.querySelectorAll('.product-tile');
+      filters.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var filter = btn.getAttribute('data-filter');
+          filters.forEach(function (b) {
+            b.setAttribute('aria-pressed', 'false');
+          });
+          btn.setAttribute('aria-pressed', 'true');
+          items.forEach(function (item) {
+            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+              item.hidden = false;
+            } else {
+              item.hidden = true;
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

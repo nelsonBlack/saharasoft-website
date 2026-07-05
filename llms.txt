@@ -1,0 +1,51 @@
+# Saharasoft Solutions
+
+Saharasoft Solutions is a custom software development company based in Nairobi, Kenya. We design, build, and operate digital products for East African businesses — from water utilities and real-estate agencies to logistics fleets and event organizers.
+
+## What we do
+
+- Custom software development for web, mobile, and business operations.
+- Product design, discovery, and ongoing engineering support.
+- Operate a portfolio of SaaS products serving utilities, logistics, real estate, events, and productivity use cases across East Africa.
+
+## Products
+
+| Product | Live Domain | Category |
+|---|---|---|
+| Arbec | https://arbecapp.saharasoftsolutions.com | Events & Conferences |
+| TallyDue | https://waterbiller.app | Water & Utilities |
+| Inbuildr | https://inbuildr.com | Productivity / Construction |
+| Baylink | https://getbaylink.com | Logistics & Transport |
+| GarageOS | https://staging-garage.saharasoft.org | Fleet / Garage Operations |
+| Realator | https://realator.api.saharasoft.org | Real Estate |
+| Courier | https://courier.saharasoft.org | Logistics & Transport |
+| Messaging | https://messaging.prod.saharasoftsolutions.com | Communications |
+| LakeVictoria100 | https://lakevictoria100.com | Events / Community |
+| Documenter | https://tools.saharasoftsolutions.com | Productivity / Developer Tools |
+
+## Services
+
+- Web and mobile application development
+- Custom business software and workflow automation
+- Product discovery and UX/UI design
+- DevOps, hosting, and ongoing support
+- Utility billing and operations software
+
+## Key links
+
+- Home: https://saharasoft.org/
+- Services: https://saharasoft.org/software-development-services.html
+- Products: https://saharasoft.org/products/index.html
+- Case studies: https://saharasoft.org/case-studies/index.html
+- About: https://saharasoft.org/about.html
+- Contact: https://saharasoft.org/contact.html
+- Blog: https://saharasoft.org/blog/index.html
+- Pricing: https://saharasoft.org/pricing.md
+- Product catalog: https://saharasoft.org/products.md
+
+## Contact
+
+- Email: nelson@saharasoftsolutions.com
+- Phone: +254 721 137000
+- Location: Nairobi, Kenya
+- Website: https://saharasoft.org/

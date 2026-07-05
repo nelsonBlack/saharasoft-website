@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Case Studies | Saharasoft Solutions</title>
+  <meta
+    name="description"
+    content="Case studies of custom web and mobile software Saharasoft Solutions has built for East African businesses — from water utilities to logistics and events."
+  />
+  <meta name="author" content="Saharasoft Solutions LTD" />
+  <meta name="robots" content="index, follow" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=5"
+  />
+  <link rel="canonical" href="https://saharasoft.org/case-studies/index.html" />
+  <link rel="shortcut icon" href="../webdeveloper/images/favicon.ico" />
+
+  <meta property="og:title" content="Case Studies | Saharasoft Solutions" />
+  <meta
+    property="og:description"
+    content="Case studies of custom web and mobile software Saharasoft Solutions has built for East African businesses."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://saharasoft.org/case-studies/index.html" />
+  <meta property="og:site_name" content="Saharasoft Solutions" />
+  <meta property="og:locale" content="en_KE" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Case Studies | Saharasoft Solutions" />
+  <meta
+    name="twitter:description"
+    content="Case studies of custom web and mobile software Saharasoft Solutions has built for East African businesses."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../css/design-system.css" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Case Studies | Saharasoft Solutions",
+      "description": "Selected case studies of custom web and mobile software built by Saharasoft Solutions for East African businesses.",
+      "url": "https://saharasoft.org/case-studies/index.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Saharasoft Solutions",
+        "url": "https://saharasoft.org/"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Article",
+              "headline": "TallyDue — Water utility billing transformation",
+              "description": "Replaced manual billing and meter reading with a unified platform for a water utility.",
+              "url": "https://saharasoft.org/case-studies/tallydue-water-utility.html"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Article",
+              "headline": "Arbec — Conference management platform",
+              "description": "Streamlined registration, scheduling, and session feedback for conference organizers.",
+              "url": "https://saharasoft.org/case-studies/arbec-conference-platform.html"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Article",
+              "headline": "Inbuildr — Construction and field operations productivity",
+              "description": "Connected field crews and office teams with real-time task tracking and reporting.",
+              "url": "https://saharasoft.org/case-studies/inbuildr-construction-operations.html"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Article",
+              "headline": "Baylink — Logistics platform",
+              "description": "Unified dispatch, route tracking, and customer communication for a logistics provider.",
+              "url": "https://saharasoft.org/case-studies/baylink-logistics-platform.html"
+            }
+          }
+        ]
+      }
+    }
+  </script>
+
+  <style>
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      z-index: 1001;
+      background: var(--color-accent);
+      color: var(--color-white);
+      padding: var(--space-3) var(--space-4);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .skip-link:focus {
+      left: var(--space-4);
+      top: var(--space-4);
+    }
+    .hero {
+      padding: calc(72px + var(--space-24)) 0 var(--space-24);
+    }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-bottom: var(--space-12);
+    }
+    .filter-btn[aria-pressed="true"] {
+      background: var(--color-accent);
+      color: var(--color-white);
+      border-color: var(--color-accent);
+    }
+    .filter-btn[aria-pressed="true"]:hover {
+      background: var(--color-accent-dark);
+      border-color: var(--color-accent-dark);
+    }
+    .placeholder-thumb {
+      aspect-ratio: 4 / 3;
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-6);
+      text-align: center;
+      font-size: var(--text-sm);
+      color: var(--color-muted);
+    }
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .gallery-item-body {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-6);
+    }
+    .gallery-item-meta {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-accent);
+      margin-bottom: var(--space-2);
+    }
+    .gallery-item h3 {
+      font-size: var(--text-xl);
+      margin-bottom: var(--space-2);
+    }
+    .gallery-item p {
+      font-size: var(--text-sm);
+      color: var(--color-muted);
+      margin-bottom: var(--space-4);
+      flex: 1 1 auto;
+    }
+    .gallery-item .btn {
+      align-self: flex-start;
+    }
+    .gallery-item[hidden] {
+      display: none;
+    }
+    .cta-band {
+      text-align: center;
+    }
+    .cta-band h2 {
+      margin-bottom: var(--space-4);
+    }
+    .cta-band p {
+      color: rgba(248, 250, 252, 0.8);
+      max-width: 680px;
+      margin: 0 auto var(--space-8);
+    }
+    .footer-grid {
+      grid-template-columns: 2fr repeat(4, 1fr);
+    }
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../index.html">Saharasoft Solutions</a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="../products/index.html">Products</a>
+        <a href="../software-development-services.html">Services</a>
+        <a href="./index.html" aria-current="page">Case Studies</a>
+        <a href="../about.html">About</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+
+      <button
+        class="mobile-menu-toggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M4 6h16M4 12h16M4 18h16"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero bg-surface">
+      <div class="container">
+        <h1 class="hero-title">How we build software that matters.</h1>
+        <p class="hero-lead">
+          Selected work from East African businesses we have partnered with to design,
+          build, and ship products that fit real operations.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Selected work</p>
+          <h2 class="section-title">Case studies</h2>
+          <p class="section-subtitle">
+            Filter by industry to see the kind of problems we solve.
+          </p>
+        </div>
+
+        <div
+          class="filter-bar"
+          role="group"
+          aria-label="Filter case studies by industry"
+        >
+          <button class="btn btn-secondary filter-btn" data-filter="all" aria-pressed="true">
+            All
+          </button>
+          <button class="btn btn-secondary filter-btn" data-filter="water" aria-pressed="false">
+            Water & Utilities
+          </button>
+          <button class="btn btn-secondary filter-btn" data-filter="events" aria-pressed="false">
+            Events & Conferences
+          </button>
+          <button class="btn btn-secondary filter-btn" data-filter="construction" aria-pressed="false">
+            Construction & Field Ops
+          </button>
+          <button class="btn btn-secondary filter-btn" data-filter="logistics" aria-pressed="false">
+            Logistics & Transport
+          </button>
+        </div>
+
+        <div class="gallery-grid" id="case-study-grid">
+          <article class="gallery-item" data-industry="water">
+            <div class="placeholder-thumb" role="img" aria-label="TallyDue case study thumbnail placeholder">
+              [placeholder — update with real app screenshot]
+            </div>
+            <div class="gallery-item-body">
+              <p class="gallery-item-meta">Water & Utilities</p>
+              <h3>TallyDue</h3>
+              <p>
+                Water utility billing transformation. Replaced manual billing and meter reading
+                with a unified platform, cutting invoice turnaround time and improving revenue
+                collection.
+              </p>
+              <a class="btn btn-primary" href="index.html">Read case study</a>
+            </div>
+          </article>
+
+          <article class="gallery-item" data-industry="events">
+            <div class="placeholder-thumb" role="img" aria-label="Arbec case study thumbnail placeholder">
+              [placeholder — update with real app screenshot]
+            </div>
+            <div class="gallery-item-body">
+              <p class="gallery-item-meta">Events & Conferences</p>
+              <h3>Arbec</h3>
+              <p>
+                Conference management platform. Streamlined registration, scheduling, and
+                session feedback, reducing administrative workload and improving the
+                attendee experience.
+              </p>
+              <a class="btn btn-primary" href="index.html">Read case study</a>
+            </div>
+          </article>
+
+          <article class="gallery-item" data-industry="construction">
+            <div class="placeholder-thumb" role="img" aria-label="Inbuildr case study thumbnail placeholder">
+              [placeholder — update with real app screenshot]
+            </div>
+            <div class="gallery-item-body">
+              <p class="gallery-item-meta">Construction & Field Ops</p>
+              <h3>Inbuildr</h3>
+              <p>
+                Construction and field operations productivity. Connected field crews and
+                office teams with real-time task tracking and reporting, increasing project
+                visibility and reducing delays.
+              </p>
+              <a class="btn btn-primary" href="index.html">Read case study</a>
+            </div>
+          </article>
+
+          <article class="gallery-item" data-industry="logistics">
+            <div class="placeholder-thumb" role="img" aria-label="Baylink case study thumbnail placeholder">
+              [placeholder — update with real app screenshot]
+            </div>
+            <div class="gallery-item-body">
+              <p class="gallery-item-meta">Logistics & Transport</p>
+              <h3>Baylink</h3>
+              <p>
+                Logistics platform. Unified dispatch, route tracking, and customer
+                communication to improve delivery reliability and fleet utilization.
+              </p>
+              <a class="btn btn-primary" href="index.html">Read case study</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark cta-band">
+      <div class="container">
+        <h2>Have a process that software could fix?</h2>
+        <p>
+          Tell us what you’re trying to solve and we’ll help you plan the right approach.
+        </p>
+        <a class="btn btn-light btn-large" href="../contact.html">Tell us about your project</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">Saharasoft Solutions</div>
+          <p>
+            Nairobi, Kenya<br />
+            <a href="mailto:nelson@saharasoftsolutions.com">nelson@saharasoftsolutions.com</a><br />
+            +254 721 137000
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">Products</h3>
+          <ul>
+            <li><a href="https://waterbiller.app">TallyDue</a></li>
+            <li><a href="https://arbecapp.saharasoftsolutions.com">Arbec</a></li>
+            <li><a href="https://inbuildr.com">Inbuildr</a></li>
+            <li><a href="https://getbaylink.com">Baylink</a></li>
+            <li><a href="../products/index.html">All products</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">Services</h3>
+          <ul>
+            <li><a href="../software-development-services.html">Custom software</a></li>
+            <li><a href="../software-development-services.html">Mobile apps</a></li>
+            <li><a href="../software-development-services.html">Product design</a></li>
+            <li><a href="../software-development-services.html">System integration</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">Resources</h3>
+          <ul>
+            <li><a href="../blog/index.html">Blog</a></li>
+            <li><a href="../case-studies/index.html">Case studies</a></li>
+            <li><a href="../about.html">About us</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-col-title">Legal</h3>
+          <ul>
+            <li>
+              <a href="../webdeveloper/terms_privacy_miradiapp.html">
+                Inbuildr Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="../webdeveloper/terms_privacy_watermeter.html">
+                TallyDue Privacy Policy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Saharasoft Solutions LTD. All Rights Reserved.</p>
+        <p>Built in Nairobi for East Africa.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.mobile-menu-toggle');
+      var nav = document.getElementById('main-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          var isOpen = nav.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', String(isOpen));
+        });
+      }
+
+      var filters = document.querySelectorAll('[data-filter]');
+      var items = document.querySelectorAll('.gallery-item');
+      filters.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var filter = btn.getAttribute('data-filter');
+          filters.forEach(function (b) {
+            b.setAttribute('aria-pressed', 'false');
+          });
+          btn.setAttribute('aria-pressed', 'true');
+
+          items.forEach(function (item) {
+            if (filter === 'all' || item.getAttribute('data-industry') === filter) {
+              item.hidden = false;
+            } else {
+              item.hidden = true;
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

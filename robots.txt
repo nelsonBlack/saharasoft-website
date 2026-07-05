@@ -1,3 +1,30 @@
+# Saharasoft Solutions — robots.txt
+# https://saharasoft.org/robots.txt
+
+# Allow major AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Block Common Crawl training crawler
+User-agent: CCBot
+Disallow: /
+
+# Default: allow all other crawlers
 User-agent: *
 Allow: /
 
