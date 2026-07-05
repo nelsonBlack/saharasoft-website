@@ -1,0 +1,52 @@
+name: Deploy Saharasoft Website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        env:
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          SERVER_USERNAME: ${{ secrets.SERVER_USERNAME }}
+          SERVER_SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SERVER_SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          cat > ~/.ssh/config <<EOF
+          Host vps
+            HostName $SERVER_IP
+            User $SERVER_USERNAME
+            IdentityFile ~/.ssh/deploy_key
+            StrictHostKeyChecking no
+            UserKnownHostsFile /dev/null
+          EOF
+          chmod 600 ~/.ssh/config
+
+      - name: Deploy to VPS
+        run: |
+          set -euo pipefail
+          rsync -avz --delete \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='.DS_Store' \
+            -e ssh \
+            ./ vps:/var/www/caddy-prod/site/saharasoft.org/
+
+      - name: Reload Caddy
+        run: |
+          set -euo pipefail
+          ssh vps 'CADDY=$(docker ps -qf "name=caddy_prod"); docker exec "$CADDY" caddy reload --config /etc/caddy/Caddyfile'
+
+      - name: Summary
+        run: |
+          echo "Deployed https://saharasoft.org/" >> "$GITHUB_STEP_SUMMARY"
