@@ -1,6 +1,6 @@
 # Saharasoft Solutions — Pricing & Service Model
 
-Saharasoft Solutions offers custom software development and product engineering services for East African businesses. Specific pricing is tailored to each project. Contact us for a custom quote.
+Saharasoft Solutions offers custom software development and product engineering services for African businesses. Specific pricing is tailored to each project. Contact us for a custom quote.
 
 ## Service Tiers
 

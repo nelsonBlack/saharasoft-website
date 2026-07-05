@@ -1,12 +1,12 @@
 # Saharasoft Solutions
 
-Saharasoft Solutions is a custom software development company based in Nairobi, Kenya. We design, build, and operate digital products for East African businesses — from water utilities and real-estate agencies to logistics fleets and event organizers.
+Saharasoft Solutions is a custom software development company based in Nairobi, Kenya. We design, build, and operate digital products for African businesses — from water utilities and real-estate agencies to logistics fleets and event organizers.
 
 ## What we do
 
 - Custom software development for web, mobile, and business operations.
 - Product design, discovery, and ongoing engineering support.
-- Operate a portfolio of SaaS products serving utilities, logistics, real estate, events, and productivity use cases across East Africa.
+- Operate a portfolio of SaaS products serving utilities, logistics, real estate, events, and productivity use cases across Africa and beyond.
 
 ## Products
 
