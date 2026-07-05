@@ -131,17 +131,17 @@
       background: var(--color-accent-dark);
       border-color: var(--color-accent-dark);
     }
-    .placeholder-thumb {
+    .case-study-thumb {
       aspect-ratio: 4 / 3;
       background: var(--color-surface);
       border-bottom: 1px solid var(--color-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: var(--space-6);
-      text-align: center;
-      font-size: var(--text-sm);
-      color: var(--color-muted);
+      overflow: hidden;
+    }
+    .case-study-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .gallery-item {
       display: flex;
@@ -283,8 +283,8 @@
 
         <div class="gallery-grid" id="case-study-grid">
           <article class="gallery-item" data-industry="water">
-            <div class="placeholder-thumb" role="img" aria-label="TallyDue case study thumbnail placeholder">
-              [placeholder — update with real app screenshot]
+            <div class="case-study-thumb">
+              <img src="../images/products/case-study-tallydue.png" alt="TallyDue billing dashboard showing cycle progress and meter health" loading="lazy" />
             </div>
             <div class="gallery-item-body">
               <p class="gallery-item-meta">Water & Utilities</p>
@@ -294,13 +294,13 @@
                 with a unified platform, cutting invoice turnaround time and improving revenue
                 collection.
               </p>
-              <a class="btn btn-primary" href="index.html">Read case study</a>
+              <a class="btn btn-primary" href="https://tallydue.com">View product</a>
             </div>
           </article>
 
           <article class="gallery-item" data-industry="events">
-            <div class="placeholder-thumb" role="img" aria-label="Arbec case study thumbnail placeholder">
-              [placeholder — update with real app screenshot]
+            <div class="case-study-thumb">
+              <img src="../images/products/case-study-arbec.png" alt="Arbec mobile conference agenda showing keynote sessions" loading="lazy" />
             </div>
             <div class="gallery-item-body">
               <p class="gallery-item-meta">Events & Conferences</p>
@@ -310,13 +310,13 @@
                 session feedback, reducing administrative workload and improving the
                 attendee experience.
               </p>
-              <a class="btn btn-primary" href="index.html">Read case study</a>
+              <a class="btn btn-primary" href="https://arbecapp.saharasoftsolutions.com">View product</a>
             </div>
           </article>
 
           <article class="gallery-item" data-industry="construction">
-            <div class="placeholder-thumb" role="img" aria-label="Inbuildr case study thumbnail placeholder">
-              [placeholder — update with real app screenshot]
+            <div class="case-study-thumb">
+              <img src="../images/products/case-study-inbuildr.png" alt="Inbuildr construction project management landing page" loading="lazy" />
             </div>
             <div class="gallery-item-body">
               <p class="gallery-item-meta">Construction & Field Ops</p>
@@ -326,13 +326,13 @@
                 office teams with real-time task tracking and reporting, increasing project
                 visibility and reducing delays.
               </p>
-              <a class="btn btn-primary" href="index.html">Read case study</a>
+              <a class="btn btn-primary" href="https://inbuildr.com">View product</a>
             </div>
           </article>
 
           <article class="gallery-item" data-industry="logistics">
-            <div class="placeholder-thumb" role="img" aria-label="Baylink case study thumbnail placeholder">
-              [placeholder — update with real app screenshot]
+            <div class="case-study-thumb">
+              <img src="../images/products/case-study-baylink.png" alt="Baylink professional network for automotive technicians" loading="lazy" />
             </div>
             <div class="gallery-item-body">
               <p class="gallery-item-meta">Logistics & Transport</p>
@@ -341,7 +341,7 @@
                 Logistics platform. Unified dispatch, route tracking, and customer
                 communication to improve delivery reliability and fleet utilization.
               </p>
-              <a class="btn btn-primary" href="index.html">Read case study</a>
+              <a class="btn btn-primary" href="https://getbaylink.com">View product</a>
             </div>
           </article>
         </div>
@@ -374,7 +374,7 @@
         <div class="footer-col">
           <h3 class="footer-col-title">Products</h3>
           <ul>
-            <li><a href="https://waterbiller.app">TallyDue</a></li>
+            <li><a href="https://tallydue.com">TallyDue</a></li>
             <li><a href="https://arbecapp.saharasoftsolutions.com">Arbec</a></li>
             <li><a href="https://inbuildr.com">Inbuildr</a></li>
             <li><a href="https://getbaylink.com">Baylink</a></li>

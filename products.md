@@ -23,9 +23,9 @@ Machine-readable product catalog for Saharasoft Solutions.
 
 - **name**: TallyDue
 - **category**: Water & Utilities
-- **url**: https://waterbiller.app
-- **description**: Water utility billing and customer management platform.
-- **problem**: Water utilities need accurate meter reading, billing, and payment tracking without relying on manual spreadsheets.
+- **url**: https://tallydue.com
+- **description**: All-in-one platform for water billing, property/rent management, short-stay operations, field readings, payments, and reporting.
+- **problem**: Utilities and property managers need accurate meter reading, billing, payment tracking, and field operations without relying on manual spreadsheets.
 - **key_features**:
   - Meter reading and consumption tracking
   - Automated billing and invoice generation

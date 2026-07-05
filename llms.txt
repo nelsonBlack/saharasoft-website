@@ -13,7 +13,7 @@ Saharasoft Solutions is a custom software development company based in Nairobi, 
 | Product | Live Domain | Category |
 |---|---|---|
 | Arbec | https://arbecapp.saharasoftsolutions.com | Events & Conferences |
-| TallyDue | https://waterbiller.app | Water & Utilities |
+| TallyDue | https://tallydue.com | Water & Utilities |
 | Inbuildr | https://inbuildr.com | Productivity / Construction |
 | Baylink | https://getbaylink.com | Logistics & Transport |
 | GarageOS | https://staging-garage.saharasoft.org | Fleet / Garage Operations |

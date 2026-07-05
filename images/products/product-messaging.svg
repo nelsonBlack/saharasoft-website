@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#f5f3f0"/>
+  <rect x="80" y="80" width="1440" height="840" rx="8" fill="none" stroke="#c65d2a" stroke-width="4" opacity="0.3"/>
+  <text x="800" y="420" font-family="Space Grotesk, Arial, sans-serif" font-size="96" font-weight="700" fill="#c65d2a" text-anchor="middle">Messaging</text>
+  <text x="800" y="540" font-family="Lato, Arial, sans-serif" font-size="40" fill="#5e6470" text-anchor="middle">SMS & Notification Backend</text>
+  <rect x="680" y="620" width="240" height="8" fill="#c65d2a"/>
+</svg>
