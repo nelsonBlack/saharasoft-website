@@ -8,22 +8,42 @@
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://saharasoft.org/products/index.html" />
-  <link rel="shortcut icon" href="../webdeveloper/images/favicon.ico" />
+  <link rel="shortcut icon" href="../images/favicon.ico" />
+  <link rel="preload" href="../css/fonts/space-grotesk-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../css/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../css/design-system.css" />
 
+  <!-- GA4: paste your Measurement ID (G-XXXXXXXXXX) to enable analytics -->
+  <script>
+    (function () {
+      var GA_ID = 'G-XXXXXXXXXX';
+      if (GA_ID.indexOf('XXXX') === -1) {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      }
+    })();
+  </script>
   <meta property="og:title" content="Products & Software We Build | Saharasoft Solutions" />
   <meta property="og:description" content="Live software products built for African businesses." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://saharasoft.org/products/index.html" />
   <meta property="og:site_name" content="Saharasoft Solutions" />
   <meta property="og:locale" content="en_KE" />
+  <meta property="og:image" content="https://saharasoft.org/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Saharasoft Solutions — custom software for how African businesses actually work" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Products & Software We Build | Saharasoft Solutions" />
   <meta name="twitter:description" content="Live software products built for African businesses." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../css/design-system.css" />
+  <meta name="twitter:image" content="https://saharasoft.org/images/og-image.jpg" />
 
   <script type="application/ld+json">
     {
@@ -54,9 +74,9 @@
       margin-bottom: var(--space-12);
     }
     .filter-btn[aria-pressed="true"] {
-      background: var(--color-accent);
+      background: var(--color-accent-strong);
       color: var(--color-white);
-      border-color: var(--color-accent);
+      border-color: var(--color-accent-strong);
     }
     .filter-btn[aria-pressed="true"]:hover {
       background: var(--color-accent-dark);
@@ -79,15 +99,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-    .footer-grid {
-      grid-template-columns: 2fr repeat(4, 1fr);
-    }
-    @media (max-width: 1024px) {
-      .footer-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 768px) {
-      .footer-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -140,7 +151,7 @@
           <article class="product-tile product-tile-large" data-category="events">
             <a href="https://arbecapp.saharasoftsolutions.com" class="card-link">
               <div class="product-tile-image">
-                <img src="../images/products/product-arbec.png" alt="Arbec mobile agenda showing conference sessions" loading="lazy" />
+                <img src="../images/products/product-arbec.webp" alt="Arbec mobile agenda showing conference sessions" width="1600" height="1000" loading="lazy" />
               </div>
               <div class="product-tile-body">
                 <p class="product-tile-meta">Events & Conferences</p>
@@ -154,7 +165,7 @@
           <article class="product-tile product-tile-large" data-category="water">
             <a href="https://tallydue.com" class="card-link">
               <div class="product-tile-image">
-                <img src="../images/products/product-tallydue.png" alt="TallyDue web dashboard and mobile meter health view" loading="lazy" />
+                <img src="../images/products/product-tallydue.webp" alt="TallyDue web dashboard and mobile meter health view" width="1600" height="1000" loading="lazy" />
               </div>
               <div class="product-tile-body">
                 <p class="product-tile-meta">Water & Utilities</p>
@@ -168,7 +179,7 @@
           <article class="product-tile product-tile-small" data-category="productivity">
             <a href="https://inbuildr.com" class="card-link">
               <div class="product-tile-image">
-                <img src="../images/products/product-inbuildr.png" alt="Inbuildr construction project management landing page" loading="lazy" />
+                <img src="../images/products/product-inbuildr-800.webp" alt="Inbuildr construction project management landing page" width="800" height="500" loading="lazy" />
               </div>
               <div class="product-tile-body">
                 <p class="product-tile-meta">Productivity / Construction</p>
@@ -181,7 +192,7 @@
           <article class="product-tile product-tile-small" data-category="logistics">
             <a href="https://getbaylink.com" class="card-link">
               <div class="product-tile-image">
-                <img src="../images/products/product-baylink.png" alt="Baylink professional network for automotive technicians" loading="lazy" />
+                <img src="../images/products/product-baylink-800.webp" alt="Baylink professional network for automotive technicians" width="800" height="500" loading="lazy" />
               </div>
               <div class="product-tile-body">
                 <p class="product-tile-meta">Logistics & Transport</p>
@@ -246,7 +257,7 @@
           <article class="product-tile product-tile-small" data-category="events">
             <a href="https://lakevictoria100.com" class="card-link">
               <div class="product-tile-image">
-                <img src="../images/products/product-lakevictoria100.png" alt="LakeVictoria100 centenary scientific survey homepage" loading="lazy" />
+                <img src="../images/products/product-lakevictoria100-800.webp" alt="LakeVictoria100 centenary scientific survey homepage" width="800" height="500" loading="lazy" />
               </div>
               <div class="product-tile-body">
                 <p class="product-tile-meta">Events / Community</p>
@@ -275,7 +286,7 @@
     <section class="section section-dark text-center">
       <div class="container container-narrow">
         <h2 class="text-white">Need a custom product?</h2>
-        <p class="text-white" style="opacity: 0.8; margin-bottom: var(--space-8);">
+        <p class="text-white-muted mb-8">
           Tell us what you are building and we will help you plan the right approach.
         </p>
         <a href="../contact.html" class="btn btn-light btn-large">Tell us about your project</a>
@@ -287,46 +298,42 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="footer-brand">Saharasoft Solutions</div>
-          <p style="color: rgba(248, 250, 252, 0.7); font-size: var(--text-sm); max-width: 320px;">
-            Custom software, product design, and system integration for African businesses.
-          </p>
-          <p style="margin-top: var(--space-4);">
+          <p class="footer-brand">Saharasoft Solutions</p>
+          <p class="footer-blurb">Custom software, product design, and system integration for African businesses.</p>
+          <p class="footer-contact">
             <a href="mailto:nelson@saharasoftsolutions.com">nelson@saharasoftsolutions.com</a><br />
             <a href="tel:+254721137000">+254 721 137000</a><br />
-            <span style="color: rgba(248, 250, 252, 0.6); font-size: var(--text-sm);">Nairobi, Kenya</span>
+            <span class="footer-location">Nairobi, Kenya</span>
           </p>
         </div>
         <div class="footer-col">
-          <h3 class="footer-col-title">Company</h3>
+          <p class="footer-col-title">Company</p>
           <ul>
             <li><a href="../about.html">About</a></li>
             <li><a href="../software-development-services.html">Services</a></li>
-            <li><a href="../case-studies/index.html">Case Studies</a></li>
-            <li><a href="../blog/index.html">Blog</a></li>
             <li><a href="../contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3 class="footer-col-title">Products</h3>
+          <p class="footer-col-title">Products</p>
           <ul>
             <li><a href="https://arbecapp.saharasoftsolutions.com">Arbec</a></li>
             <li><a href="https://tallydue.com">TallyDue</a></li>
             <li><a href="https://inbuildr.com">Inbuildr</a></li>
             <li><a href="https://getbaylink.com">Baylink</a></li>
-            <li><a href="https://staging-garage.saharasoft.org">GarageOS</a></li>
+            <li><a href="./index.html">All products</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3 class="footer-col-title">Resources</h3>
+          <p class="footer-col-title">Resources</p>
           <ul>
-            <li><a href="../pricing.md">Pricing</a></li>
-            <li><a href="../products.md">Product catalog</a></li>
-            <li><a href="../llms.txt">AI overview</a></li>
+            <li><a href="../pricing.html">Pricing</a></li>
+            <li><a href="../blog/index.html">Blog</a></li>
+            <li><a href="../case-studies/index.html">Case Studies</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3 class="footer-col-title">Legal</h3>
+          <p class="footer-col-title">Legal</p>
           <ul>
             <li><a href="../webdeveloper/terms_privacy_miradiapp.html">Inbuildr Privacy Policy</a></li>
             <li><a href="../webdeveloper/terms_privacy_watermeter.html">TallyDue Privacy Policy</a></li>

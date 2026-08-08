@@ -14,7 +14,7 @@
       rel="canonical"
       href="https://saharasoft.org/software-development-services.html"
     />
-    <link rel="shortcut icon" href="webdeveloper/images/favicon.ico" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
 
     <meta
       property="og:title"
@@ -24,13 +24,17 @@
       property="og:description"
       content="Custom software, web, and mobile app development for businesses across Africa and beyond."
     />
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="website" />
     <meta
       property="og:url"
       content="https://saharasoft.org/software-development-services.html"
     />
     <meta property="og:site_name" content="Saharasoft Solutions" />
     <meta property="og:locale" content="en_KE" />
+    <meta property="og:image" content="https://saharasoft.org/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Saharasoft Solutions — custom software for how African businesses actually work" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -41,6 +45,7 @@
       name="twitter:description"
       content="Custom software, web, and mobile app development for businesses across Africa and beyond."
     />
+    <meta name="twitter:image" content="https://saharasoft.org/images/og-image.jpg" />
 
     <script type="application/ld+json">
       {
@@ -61,9 +66,26 @@
       }
     </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="css/fonts/space-grotesk-500.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="css/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="css/design-system.css" />
+
+    <!-- GA4: paste your Measurement ID (G-XXXXXXXXXX) to enable analytics -->
+    <script>
+      (function () {
+        var GA_ID = 'G-XXXXXXXXXX';
+        if (GA_ID.indexOf('XXXX') === -1) {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+          document.head.appendChild(s);
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', GA_ID);
+        }
+      })();
+    </script>
 
     <style>
       .text-lg {
@@ -85,6 +107,23 @@
         margin-bottom: var(--space-3);
       }
     </style>
+
+    <!-- GA4: paste your Measurement ID (G-XXXXXXXXXX) to enable analytics -->
+    <script>
+      (function () {
+        var GA_ID = 'G-XXXXXXXXXX';
+        if (GA_ID.indexOf('XXXX') === -1) {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+          document.head.appendChild(s);
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', GA_ID);
+        }
+      })();
+    </script>
   </head>
   <body>
     <header class="site-header" role="banner">
@@ -262,46 +301,51 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-col">
-            <div class="footer-brand">Saharasoft Solutions</div>
-            <p>Custom software for African businesses. Nairobi, Kenya.</p>
+            <p class="footer-brand">Saharasoft Solutions</p>
+            <p class="footer-blurb">Custom software, product design, and system integration for African businesses.</p>
+            <p class="footer-contact">
+              <a href="mailto:nelson@saharasoftsolutions.com">nelson@saharasoftsolutions.com</a><br />
+              <a href="tel:+254721137000">+254 721 137000</a><br />
+              <span class="footer-location">Nairobi, Kenya</span>
+            </p>
           </div>
           <div class="footer-col">
-            <h4 class="footer-col-title">Company</h4>
+            <p class="footer-col-title">Company</p>
             <ul>
               <li><a href="about.html">About</a></li>
-              <li><a href="case-studies/index.html">Case Studies</a></li>
-              <li><a href="blog/index.html">Blog</a></li>
+              <li><a href="software-development-services.html">Services</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4 class="footer-col-title">Products</h4>
+            <p class="footer-col-title">Products</p>
             <ul>
-              <li><a href="products/index.html">Our Products</a></li>
               <li><a href="https://arbecapp.saharasoftsolutions.com">Arbec</a></li>
               <li><a href="https://tallydue.com">TallyDue</a></li>
               <li><a href="https://inbuildr.com">Inbuildr</a></li>
+              <li><a href="https://getbaylink.com">Baylink</a></li>
+              <li><a href="products/index.html">All products</a></li>
             </ul>
           </div>
           <div class="footer-col">
-            <h4 class="footer-col-title">Legal</h4>
+            <p class="footer-col-title">Resources</p>
             <ul>
-              <li>
-                <a href="webdeveloper/terms_privacy_miradiapp.html"
-                  >Inbuildr Privacy Policy</a
-                >
-              </li>
-              <li>
-                <a href="webdeveloper/terms_privacy_watermeter.html"
-                  >TallyDue Privacy Policy</a
-                >
-              </li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="blog/index.html">Blog</a></li>
+              <li><a href="case-studies/index.html">Case Studies</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title">Legal</p>
+            <ul>
+              <li><a href="webdeveloper/terms_privacy_miradiapp.html">Inbuildr Privacy Policy</a></li>
+              <li><a href="webdeveloper/terms_privacy_watermeter.html">TallyDue Privacy Policy</a></li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2026 Saharasoft Solutions LTD. All Rights Reserved.</p>
-          <p>nelson@saharasoftsolutions.com &middot; +254 721 137000</p>
+          <p>&copy; 2026 Saharasoft Solutions LTD. All rights reserved.</p>
+          <p>Serving Africa and the world from Nairobi, Kenya.</p>
         </div>
       </div>
     </footer>

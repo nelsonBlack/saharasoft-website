@@ -15,10 +15,15 @@
 <meta property="og:url" content="https://saharasoft.org/about.html">
 <meta property="og:site_name" content="Saharasoft Solutions">
 <meta property="og:locale" content="en_KE">
+<meta property="og:image" content="https://saharasoft.org/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Saharasoft Solutions — custom software for how African businesses actually work">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About Saharasoft Solutions | Software Development Company">
 <meta name="twitter:description" content="Nairobi-based software development company with 12+ years of experience building custom web and mobile apps for African businesses.">
+<meta name="twitter:image" content="https://saharasoft.org/images/og-image.jpg">
 
 <script type="application/ld+json">
 {
@@ -40,7 +45,6 @@
       "name": "Saharasoft Solutions LTD",
       "alternateName": "Saharasoft Solutions",
       "url": "https://saharasoft.org/",
-      "logo": "https://saharasoft.org/webdeveloper/images/saharasoft.png",
       "description": "Custom software development company based in Nairobi, Kenya, serving businesses across Africa and beyond.",
       "email": "nelson@saharasoftsolutions.com",
       "telephone": "+254721137000",
@@ -58,7 +62,9 @@
 }
 </script>
 
-<link rel="shortcut icon" href="webdeveloper/images/favicon.ico">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="preload" href="css/fonts/space-grotesk-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/design-system.css">
 <style>
   .footer-grid { grid-template-columns: 2fr repeat(4, 1fr); }
@@ -129,13 +135,29 @@
     .process-step { flex-direction: column; gap: var(--space-4); }
   }
 </style>
+<!-- GA4: paste your Measurement ID (G-XXXXXXXXXX) to enable analytics -->
+<script>
+  (function () {
+    var GA_ID = 'G-XXXXXXXXXX';
+    if (GA_ID.indexOf('XXXX') === -1) {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    }
+  })();
+</script>
 </head>
 <body>
 <a class="visually-hidden" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="logo">Saharasoft Solutions</a>
-    <nav class="main-nav" aria-label="Main navigation">
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
       <a href="products/index.html">Products</a>
       <a href="software-development-services.html">Services</a>
       <a href="case-studies/index.html">Case Studies</a>
@@ -143,7 +165,7 @@
       <a href="blog/index.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
         <line x1="3" y1="6" x2="21" y2="6"></line>
         <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -345,40 +367,43 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div>
-        <div class="footer-brand">Saharasoft Solutions</div>
-        <p style="color: rgba(248,250,252,0.7); font-size: 0.875rem; max-width: 280px;">Custom web and mobile apps for businesses across Africa and beyond. Nairobi, Kenya.</p>
+      <div class="footer-col">
+        <p class="footer-brand">Saharasoft Solutions</p>
+        <p class="footer-blurb">Custom software, product design, and system integration for African businesses.</p>
+        <p class="footer-contact">
+          <a href="mailto:nelson@saharasoftsolutions.com">nelson@saharasoftsolutions.com</a><br />
+          <a href="tel:+254721137000">+254 721 137000</a><br />
+          <span class="footer-location">Nairobi, Kenya</span>
+        </p>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title">Company</div>
+        <p class="footer-col-title">Company</p>
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="case-studies/index.html">Case Studies</a></li>
-          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="software-development-services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title">Products</div>
+        <p class="footer-col-title">Products</p>
         <ul>
           <li><a href="https://arbecapp.saharasoftsolutions.com">Arbec</a></li>
           <li><a href="https://tallydue.com">TallyDue</a></li>
           <li><a href="https://inbuildr.com">Inbuildr</a></li>
           <li><a href="https://getbaylink.com">Baylink</a></li>
-          <li><a href="https://staging-garage.saharasoft.org">GarageOS</a></li>
           <li><a href="products/index.html">All products</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title">Services</div>
+        <p class="footer-col-title">Resources</p>
         <ul>
-          <li><a href="software-development-services.html">Custom Development</a></li>
-          <li><a href="software-development-services.html">Mobile Apps</a></li>
-          <li><a href="software-development-services.html">Product Design</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="case-studies/index.html">Case Studies</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <div class="footer-col-title">Legal</div>
+        <p class="footer-col-title">Legal</p>
         <ul>
           <li><a href="webdeveloper/terms_privacy_miradiapp.html">Inbuildr Privacy Policy</a></li>
           <li><a href="webdeveloper/terms_privacy_watermeter.html">TallyDue Privacy Policy</a></li>
@@ -386,8 +411,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2026 Saharasoft Solutions LTD. All rights reserved.</div>
-      <div>Nairobi, Kenya &middot; nelson@saharasoftsolutions.com</div>
+      <p>&copy; 2026 Saharasoft Solutions LTD. All rights reserved.</p>
+      <p>Serving Africa and the world from Nairobi, Kenya.</p>
     </div>
   </div>
 </footer>

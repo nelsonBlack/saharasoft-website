@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Page Not Found | Saharasoft Solutions</title>
+  <meta name="description" content="The page you are looking for does not exist. Visit the Saharasoft Solutions homepage to explore our products, services, and case studies." />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://saharasoft.org/404.html" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="preload" href="css/fonts/space-grotesk-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="css/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/design-system.css" />
+  <style>
+    .error-section { padding: calc(72px + var(--space-24)) 0 var(--space-24); }
+    .error-code {
+      font-family: var(--font-display);
+      font-size: var(--text-5xl);
+      font-weight: 700;
+      color: var(--color-accent);
+      line-height: 1;
+      margin-bottom: var(--space-4);
+    }
+  </style>
+</head>
+
+<body>
+  <a class="visually-hidden" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Saharasoft Solutions</a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="products/index.html">Products</a>
+        <a href="software-development-services.html">Services</a>
+        <a href="case-studies/index.html">Case Studies</a>
+        <a href="about.html">About</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="error-section text-center bg-surface">
+      <div class="container container-narrow">
+        <p class="error-code">404</p>
+        <h1 class="hero-title">This page does not exist</h1>
+        <p class="hero-lead">The page you are looking for may have moved or been removed. The good stuff is still here.</p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="index.html" class="btn btn-primary btn-large">Back to homepage</a>
+          <a href="products/index.html" class="btn btn-secondary btn-large">Explore our products</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-brand">Saharasoft Solutions</p>
+          <p class="footer-blurb">Custom software, product design, and system integration for African businesses.</p>
+          <p class="footer-contact">
+            <a href="mailto:nelson@saharasoftsolutions.com">nelson@saharasoftsolutions.com</a><br />
+            <a href="tel:+254721137000">+254 721 137000</a><br />
+            <span class="footer-location">Nairobi, Kenya</span>
+          </p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Company</p>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="software-development-services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Products</p>
+          <ul>
+            <li><a href="https://arbecapp.saharasoftsolutions.com">Arbec</a></li>
+            <li><a href="https://tallydue.com">TallyDue</a></li>
+            <li><a href="https://inbuildr.com">Inbuildr</a></li>
+            <li><a href="https://getbaylink.com">Baylink</a></li>
+            <li><a href="products/index.html">All products</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Resources</p>
+          <ul>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="case-studies/index.html">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Legal</p>
+          <ul>
+            <li><a href="webdeveloper/terms_privacy_miradiapp.html">Inbuildr Privacy Policy</a></li>
+            <li><a href="webdeveloper/terms_privacy_watermeter.html">TallyDue Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Saharasoft Solutions LTD. All rights reserved.</p>
+        <p>Serving Africa and the world from Nairobi, Kenya.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.mobile-menu-toggle');
+      var nav = document.getElementById('main-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          var isOpen = nav.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', String(isOpen));
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

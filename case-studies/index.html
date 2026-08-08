@@ -14,7 +14,7 @@
     content="width=device-width, initial-scale=1, maximum-scale=5"
   />
   <link rel="canonical" href="https://saharasoft.org/case-studies/index.html" />
-  <link rel="shortcut icon" href="../webdeveloper/images/favicon.ico" />
+  <link rel="shortcut icon" href="../images/favicon.ico" />
 
   <meta property="og:title" content="Case Studies | Saharasoft Solutions" />
   <meta
@@ -25,6 +25,10 @@
   <meta property="og:url" content="https://saharasoft.org/case-studies/index.html" />
   <meta property="og:site_name" content="Saharasoft Solutions" />
   <meta property="og:locale" content="en_KE" />
+  <meta property="og:image" content="https://saharasoft.org/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Saharasoft Solutions — custom software for how African businesses actually work" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Case Studies | Saharasoft Solutions" />
@@ -32,10 +36,29 @@
     name="twitter:description"
     content="Case studies of custom web and mobile software Saharasoft Solutions has built for African businesses."
   />
+  <meta name="twitter:image" content="https://saharasoft.org/images/og-image.jpg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="shortcut icon" href="../images/favicon.ico" />
+  <link rel="preload" href="../css/fonts/space-grotesk-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../css/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../css/design-system.css" />
+
+  <!-- GA4: paste your Measurement ID (G-XXXXXXXXXX) to enable analytics -->
+  <script>
+    (function () {
+      var GA_ID = 'G-XXXXXXXXXX';
+      if (GA_ID.indexOf('XXXX') === -1) {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      }
+    })();
+  </script>
 
   <script type="application/ld+json">
     {
@@ -98,21 +121,6 @@
   </script>
 
   <style>
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: 0;
-      z-index: 1001;
-      background: var(--color-accent);
-      color: var(--color-white);
-      padding: var(--space-3) var(--space-4);
-      text-decoration: none;
-      font-weight: 700;
-    }
-    .skip-link:focus {
-      left: var(--space-4);
-      top: var(--space-4);
-    }
     .hero {
       padding: calc(72px + var(--space-24)) 0 var(--space-24);
     }
@@ -123,9 +131,9 @@
       margin-bottom: var(--space-12);
     }
     .filter-btn[aria-pressed="true"] {
-      background: var(--color-accent);
+      background: var(--color-accent-strong);
       color: var(--color-white);
-      border-color: var(--color-accent);
+      border-color: var(--color-accent-strong);
     }
     .filter-btn[aria-pressed="true"]:hover {
       background: var(--color-accent-dark);
@@ -158,7 +166,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--color-accent);
+      color: var(--color-accent-dark);
       margin-bottom: var(--space-2);
     }
     .gallery-item h3 {
@@ -174,6 +182,12 @@
     .gallery-item .btn {
       align-self: flex-start;
     }
+    .gallery-actions {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      align-items: flex-start;
+    }
     .gallery-item[hidden] {
       display: none;
     }
@@ -184,28 +198,15 @@
       margin-bottom: var(--space-4);
     }
     .cta-band p {
-      color: rgba(248, 250, 252, 0.8);
+      color: var(--color-dark-text-muted);
       max-width: 680px;
       margin: 0 auto var(--space-8);
-    }
-    .footer-grid {
-      grid-template-columns: 2fr repeat(4, 1fr);
-    }
-    @media (max-width: 1024px) {
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    @media (max-width: 768px) {
-      .footer-grid {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <a class="visually-hidden" href="#main">Skip to main content</a>
 
   <header class="site-header">
     <div class="container header-inner">
@@ -284,7 +285,7 @@
         <div class="gallery-grid" id="case-study-grid">
           <article class="gallery-item" data-industry="water">
             <div class="case-study-thumb">
-              <img src="../images/products/case-study-tallydue.png" alt="TallyDue billing dashboard showing cycle progress and meter health" loading="lazy" />
+              <img src="../images/products/case-study-tallydue.webp" alt="TallyDue billing dashboard showing cycle progress and meter health" width="1200" height="900" loading="lazy" />
             </div>
             <div class="gallery-item-body">
               <p class="gallery-item-meta">Water & Utilities</p>
@@ -294,13 +295,16 @@
                 with a unified platform, cutting invoice turnaround time and improving revenue
                 collection.
               </p>
-              <a class="btn btn-primary" href="https://tallydue.com">View product</a>
+              <div class="gallery-actions">
+                <a class="btn btn-primary" href="tallydue-water-utility.html">Read the case study</a>
+                <a class="service-link" href="https://tallydue.com" target="_blank" rel="noopener">Visit tallydue.com →</a>
+              </div>
             </div>
           </article>
 
           <article class="gallery-item" data-industry="events">
             <div class="case-study-thumb">
-              <img src="../images/products/case-study-arbec.png" alt="Arbec mobile conference agenda showing keynote sessions" loading="lazy" />
+              <img src="../images/products/case-study-arbec.webp" alt="Arbec mobile conference agenda showing keynote sessions" width="1200" height="900" loading="lazy" />
             </div>
             <div class="gallery-item-body">
               <p class="gallery-item-meta">Events & Conferences</p>
@@ -310,13 +314,16 @@
                 session feedback, reducing administrative workload and improving the
                 attendee experience.
               </p>
-              <a class="btn btn-primary" href="https://arbecapp.saharasoftsolutions.com">View product</a>
+              <div class="gallery-actions">
+                <a class="btn btn-primary" href="arbec-conference-platform.html">Read the case study</a>
+                <a class="service-link" href="https://arbecapp.saharasoftsolutions.com" target="_blank" rel="noopener">Visit arbecapp.saharasoftsolutions.com →</a>
+              </div>
             </div>
           </article>
 
           <article class="gallery-item" data-industry="construction">
             <div class="case-study-thumb">
-              <img src="../images/products/case-study-inbuildr.png" alt="Inbuildr construction project management landing page" loading="lazy" />
+              <img src="../images/products/case-study-inbuildr.webp" alt="Inbuildr construction project management landing page" width="1200" height="900" loading="lazy" />
             </div>
             <div class="gallery-item-body">
               <p class="gallery-item-meta">Construction & Field Ops</p>
@@ -326,13 +333,16 @@
                 office teams with real-time task tracking and reporting, increasing project
                 visibility and reducing delays.
               </p>
-              <a class="btn btn-primary" href="https://inbuildr.com">View product</a>
+              <div class="gallery-actions">
+                <a class="btn btn-primary" href="inbuildr-construction-operations.html">Read the case study</a>
+                <a class="service-link" href="https://inbuildr.com" target="_blank" rel="noopener">Visit inbuildr.com →</a>
+              </div>
             </div>
           </article>
 
           <article class="gallery-item" data-industry="logistics">
             <div class="case-study-thumb">
-              <img src="../images/products/case-study-baylink.png" alt="Baylink professional network for automotive technicians" loading="lazy" />
+              <img src="../images/products/case-study-baylink.webp" alt="Baylink professional network for automotive technicians" width="1200" height="900" loading="lazy" />
             </div>
             <div class="gallery-item-body">
               <p class="gallery-item-meta">Logistics & Transport</p>
@@ -341,7 +351,10 @@
                 Logistics platform. Unified dispatch, route tracking, and customer
                 communication to improve delivery reliability and fleet utilization.
               </p>
-              <a class="btn btn-primary" href="https://getbaylink.com">View product</a>
+              <div class="gallery-actions">
+                <a class="btn btn-primary" href="baylink-logistics-platform.html">Read the case study</a>
+                <a class="service-link" href="https://getbaylink.com" target="_blank" rel="noopener">Visit getbaylink.com →</a>
+              </div>
             </div>
           </article>
         </div>
@@ -363,65 +376,51 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="footer-brand">Saharasoft Solutions</div>
-          <p>
-            Nairobi, Kenya<br />
+          <p class="footer-brand">Saharasoft Solutions</p>
+          <p class="footer-blurb">Custom software, product design, and system integration for African businesses.</p>
+          <p class="footer-contact">
             <a href="mailto:nelson@saharasoftsolutions.com">nelson@saharasoftsolutions.com</a><br />
-            +254 721 137000
+            <a href="tel:+254721137000">+254 721 137000</a><br />
+            <span class="footer-location">Nairobi, Kenya</span>
           </p>
         </div>
-
         <div class="footer-col">
-          <h3 class="footer-col-title">Products</h3>
+          <p class="footer-col-title">Company</p>
           <ul>
-            <li><a href="https://tallydue.com">TallyDue</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../software-development-services.html">Services</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Products</p>
+          <ul>
             <li><a href="https://arbecapp.saharasoftsolutions.com">Arbec</a></li>
+            <li><a href="https://tallydue.com">TallyDue</a></li>
             <li><a href="https://inbuildr.com">Inbuildr</a></li>
             <li><a href="https://getbaylink.com">Baylink</a></li>
             <li><a href="../products/index.html">All products</a></li>
           </ul>
         </div>
-
         <div class="footer-col">
-          <h3 class="footer-col-title">Services</h3>
+          <p class="footer-col-title">Resources</p>
           <ul>
-            <li><a href="../software-development-services.html">Custom software</a></li>
-            <li><a href="../software-development-services.html">Mobile apps</a></li>
-            <li><a href="../software-development-services.html">Product design</a></li>
-            <li><a href="../software-development-services.html">System integration</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h3 class="footer-col-title">Resources</h3>
-          <ul>
+            <li><a href="../pricing.html">Pricing</a></li>
             <li><a href="../blog/index.html">Blog</a></li>
-            <li><a href="../case-studies/index.html">Case studies</a></li>
-            <li><a href="../about.html">About us</a></li>
-            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="./index.html">Case Studies</a></li>
           </ul>
         </div>
-
         <div class="footer-col">
-          <h3 class="footer-col-title">Legal</h3>
+          <p class="footer-col-title">Legal</p>
           <ul>
-            <li>
-              <a href="../webdeveloper/terms_privacy_miradiapp.html">
-                Inbuildr Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="../webdeveloper/terms_privacy_watermeter.html">
-                TallyDue Privacy Policy
-              </a>
-            </li>
+            <li><a href="../webdeveloper/terms_privacy_miradiapp.html">Inbuildr Privacy Policy</a></li>
+            <li><a href="../webdeveloper/terms_privacy_watermeter.html">TallyDue Privacy Policy</a></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <p>&copy; 2026 Saharasoft Solutions LTD. All Rights Reserved.</p>
-        <p>Built in Nairobi for Africa and the world.</p>
+        <p>&copy; 2026 Saharasoft Solutions LTD. All rights reserved.</p>
+        <p>Serving Africa and the world from Nairobi, Kenya.</p>
       </div>
     </div>
   </footer>

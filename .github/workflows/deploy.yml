@@ -35,10 +35,34 @@ jobs:
       - name: Deploy to VPS
         run: |
           set -euo pipefail
-          rsync -avzc --delete --delete-after --stats \
+          # Only the live design-system site ships. Legacy BeTheme template junk
+          # (theme/, plugins/, js/, legacy css), the legacy webdeveloper mini-site
+          # (except the two privacy policies still linked from app stores), and
+          # junk files are excluded and purged from the server with --delete-excluded.
+          rsync -avzc --delete --delete-excluded --stats \
             --exclude='.git' \
             --exclude='.github' \
             --exclude='.DS_Store' \
+            --exclude='.agents' \
+            --exclude='docs/audit' \
+            --exclude='theme' \
+            --exclude='plugins' \
+            --exclude='js' \
+            --exclude='css/global.css' \
+            --exclude='css/structure.css' \
+            --exclude='css/be_style.css' \
+            --exclude='css/custom.css' \
+            --exclude='css/skins' \
+            --exclude='css/fonts/mfn-icons*' \
+            --exclude='css/fonts/star.*' \
+            --exclude='css/fonts/WooCommerce.*' \
+            --include='webdeveloper/terms_privacy_miradiapp.html' \
+            --include='webdeveloper/terms_privacy_watermeter.html' \
+            --exclude='webdeveloper/*' \
+            --exclude='*.docx' \
+            --exclude='*.swf' \
+            --exclude='Thumbs.db' \
+            --exclude='images/Sequence-01_1.mp4' \
             -e ssh \
             ./ vps:/var/www/caddy-prod/site/saharasoft.org/
 

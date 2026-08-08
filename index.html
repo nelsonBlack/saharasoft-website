@@ -16,17 +16,39 @@
   <meta property="og:url" content="https://saharasoft.org/" />
   <meta property="og:site_name" content="Saharasoft Solutions" />
   <meta property="og:locale" content="en_KE" />
+  <meta property="og:image" content="https://saharasoft.org/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Saharasoft Solutions — custom software for how African businesses actually work" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Saharasoft Solutions | Custom Software Development for Africa and the World" />
   <meta name="twitter:description" content="Saharasoft Solutions builds custom web and mobile software for businesses across Africa and beyond." />
+  <meta name="twitter:image" content="https://saharasoft.org/images/og-image.jpg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="css/fonts/space-grotesk-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="css/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="stylesheet" href="css/design-system.css" />
-  <link rel="shortcut icon" href="webdeveloper/images/favicon.ico" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+
+  <!-- GA4: paste your Measurement ID (G-XXXXXXXXXX) to enable analytics -->
+  <script>
+    (function () {
+      var GA_ID = 'G-XXXXXXXXXX';
+      if (GA_ID.indexOf('XXXX') === -1) {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      }
+    })();
+  </script>
 
   <script type="application/ld+json">
     [
@@ -34,8 +56,8 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Saharasoft Solutions LTD",
+        "alternateName": "Saharasoft Solutions",
         "url": "https://saharasoft.org/",
-        "logo": "https://saharasoft.org/webdeveloper/images/saharasoft.png",
         "email": "nelson@saharasoftsolutions.com",
         "telephone": "+254721137000",
         "address": {
@@ -49,6 +71,13 @@
       },
       {
         "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Saharasoft Solutions",
+        "url": "https://saharasoft.org/",
+        "description": "Custom software development for African businesses and beyond."
+      },
+      {
+        "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "Saharasoft Solutions LTD",
         "description": "Custom software development, product design, and system integration for businesses across Africa and beyond.",
@@ -57,8 +86,13 @@
         "telephone": "+254721137000",
         "address": {
           "@type": "PostalAddress",
-          "addressCountry": "KE",
-          "addressLocality": "Nairobi"
+          "addressLocality": "Nairobi",
+          "addressCountry": "KE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -1.2921,
+          "longitude": 36.8219
         },
         "areaServed": "Africa, Worldwide",
         "priceRange": "$$"
@@ -182,7 +216,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="logo">Saharasoft Solutions</a>
-      <nav class="main-nav" aria-label="Main">
+      <nav class="main-nav" id="main-nav" aria-label="Main">
         <a href="products/index.html">Products</a>
         <a href="software-development-services.html">Services</a>
         <a href="case-studies/index.html">Case Studies</a>
@@ -190,7 +224,7 @@
         <a href="blog/index.html">Blog</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
     </div>
@@ -210,7 +244,7 @@
           </div>
         </div>
         <div class="hero-visual">
-          <img src="images/hero-collage.png" alt="Collage of Saharasoft products including TallyDue, Inbuildr, Baylink, and LakeVictoria100" loading="lazy" />
+          <img src="images/hero-collage.webp" alt="Collage of Saharasoft products including TallyDue, Inbuildr, Baylink, and LakeVictoria100" width="1600" height="1000" fetchpriority="high" />
         </div>
       </div>
     </section>
@@ -229,7 +263,7 @@
           <article class="product-tile product-tile-large">
             <a href="https://arbecapp.saharasoftsolutions.com" class="card-link">
               <div class="product-tile-image">
-                <img src="images/products/product-arbec.png" alt="Arbec mobile agenda showing conference sessions" loading="lazy" />
+                <img src="images/products/product-arbec.webp" alt="Arbec mobile agenda showing conference sessions" width="1600" height="1000" loading="lazy" />
               </div>
               <div class="product-tile-body">
                 <p class="product-tile-meta">Events & Conferences</p>
@@ -243,7 +277,7 @@
           <article class="product-tile product-tile-large">
             <a href="https://tallydue.com" class="card-link">
               <div class="product-tile-image">
-                <img src="images/products/product-tallydue.png" alt="TallyDue web dashboard and mobile meter health view" loading="lazy" />
+                <img src="images/products/product-tallydue.webp" alt="TallyDue web dashboard and mobile meter health view" width="1600" height="1000" loading="lazy" />
               </div>
               <div class="product-tile-body">
                 <p class="product-tile-meta">Water & Utilities</p>
@@ -257,7 +291,7 @@
           <article class="product-tile product-tile-small">
             <a href="https://inbuildr.com" class="card-link">
               <div class="product-tile-image">
-                <img src="images/products/product-inbuildr.png" alt="Inbuildr construction project management landing page" loading="lazy" />
+                <img src="images/products/product-inbuildr-800.webp" alt="Inbuildr construction project management landing page" width="800" height="500" loading="lazy" />
               </div>
               <div class="product-tile-body">
                 <p class="product-tile-meta">Productivity</p>
@@ -270,7 +304,7 @@
           <article class="product-tile product-tile-small">
             <a href="https://getbaylink.com" class="card-link">
               <div class="product-tile-image">
-                <img src="images/products/product-baylink.png" alt="Baylink professional network for automotive technicians" loading="lazy" />
+                <img src="images/products/product-baylink-800.webp" alt="Baylink professional network for automotive technicians" width="800" height="500" loading="lazy" />
               </div>
               <div class="product-tile-body">
                 <p class="product-tile-meta">Logistics & Transport</p>
@@ -335,7 +369,7 @@
           <article class="product-tile product-tile-small">
             <a href="https://lakevictoria100.com" class="card-link">
               <div class="product-tile-image">
-                <img src="images/products/product-lakevictoria100.png" alt="LakeVictoria100 centenary scientific survey homepage" loading="lazy" />
+                <img src="images/products/product-lakevictoria100-800.webp" alt="LakeVictoria100 centenary scientific survey homepage" width="800" height="500" loading="lazy" />
               </div>
               <div class="product-tile-body">
                 <p class="product-tile-meta">Events</p>
@@ -418,7 +452,7 @@
             <a href="case-studies/index.html" class="btn btn-primary">Read the case study</a>
           </div>
           <div class="case-study-visual">
-            <img src="images/products/case-study-tallydue.png" alt="TallyDue billing dashboard showing billing cycle progress and meter health" loading="lazy" />
+            <img src="images/products/case-study-tallydue.webp" alt="TallyDue billing dashboard showing billing cycle progress and meter health" width="1200" height="900" loading="lazy" />
           </div>
         </div>
       </div>
@@ -490,7 +524,7 @@
     <section class="section section-dark text-center" aria-labelledby="cta-heading">
       <div class="container container-narrow">
         <h2 id="cta-heading" class="text-white">Have a process that software could fix?</h2>
-        <p class="text-white" style="opacity: 0.8; margin-bottom: var(--space-8);">
+        <p class="text-white-muted mb-8">
           Tell us what slows your team down. We will reply with the clearest next step, even if that is not hiring us.
         </p>
         <a href="contact.html" class="btn btn-light btn-large">Tell us about your project</a>
@@ -503,13 +537,11 @@
       <div class="footer-grid">
         <div class="footer-col">
           <p class="footer-brand">Saharasoft Solutions</p>
-          <p style="color: rgba(248, 250, 252, 0.7); font-size: var(--text-sm); max-width: 320px;">
-            Custom software, product design, and system integration for African businesses.
-          </p>
-          <p style="margin-top: var(--space-4);">
+          <p class="footer-blurb">Custom software, product design, and system integration for African businesses.</p>
+          <p class="footer-contact">
             <a href="mailto:nelson@saharasoftsolutions.com">nelson@saharasoftsolutions.com</a><br />
             <a href="tel:+254721137000">+254 721 137000</a><br />
-            <span style="color: rgba(248, 250, 252, 0.6); font-size: var(--text-sm);">Nairobi, Kenya</span>
+            <span class="footer-location">Nairobi, Kenya</span>
           </p>
         </div>
         <div class="footer-col">
@@ -517,8 +549,6 @@
           <ul>
             <li><a href="about.html">About</a></li>
             <li><a href="software-development-services.html">Services</a></li>
-            <li><a href="case-studies/index.html">Case Studies</a></li>
-            <li><a href="blog/index.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -529,7 +559,15 @@
             <li><a href="https://tallydue.com">TallyDue</a></li>
             <li><a href="https://inbuildr.com">Inbuildr</a></li>
             <li><a href="https://getbaylink.com">Baylink</a></li>
-            <li><a href="https://staging-garage.saharasoft.org">GarageOS</a></li>
+            <li><a href="products/index.html">All products</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Resources</p>
+          <ul>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="case-studies/index.html">Case Studies</a></li>
           </ul>
         </div>
         <div class="footer-col">

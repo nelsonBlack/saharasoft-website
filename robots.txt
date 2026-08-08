@@ -20,6 +20,12 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Bytespider
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 # Block Common Crawl training crawler
 User-agent: CCBot
 Disallow: /

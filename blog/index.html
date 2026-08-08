@@ -8,7 +8,7 @@
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://saharasoft.org/blog/index.html" />
-  <link rel="shortcut icon" href="../webdeveloper/images/favicon.ico" />
+  <link rel="shortcut icon" href="../images/favicon.ico" />
 
   <meta property="og:title" content="Blog | Saharasoft Solutions" />
   <meta property="og:description" content="Articles on custom software, product design, and digital transformation for African businesses." />
@@ -16,14 +16,36 @@
   <meta property="og:url" content="https://saharasoft.org/blog/index.html" />
   <meta property="og:site_name" content="Saharasoft Solutions" />
   <meta property="og:locale" content="en_KE" />
+  <meta property="og:image" content="https://saharasoft.org/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Saharasoft Solutions — custom software for how African businesses actually work" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Blog | Saharasoft Solutions" />
   <meta name="twitter:description" content="Articles on custom software, product design, and digital transformation for African businesses." />
+  <meta name="twitter:image" content="https://saharasoft.org/images/og-image.jpg" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="../css/fonts/space-grotesk-500.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../css/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../css/design-system.css" />
+
+  <!-- GA4: paste your Measurement ID (G-XXXXXXXXXX) to enable analytics -->
+  <script>
+    (function () {
+      var GA_ID = 'G-XXXXXXXXXX';
+      if (GA_ID.indexOf('XXXX') === -1) {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+      }
+    })();
+  </script>
 
   <script type="application/ld+json">
     {
@@ -50,10 +72,7 @@
     }
     .blog-item h2 { font-size: var(--text-2xl); margin-bottom: var(--space-3); }
     .blog-item h2 a { color: var(--color-base); }
-    .blog-item h2 a:hover { color: var(--color-accent); text-decoration: none; }
-    .footer-grid { grid-template-columns: 2fr repeat(4, 1fr); }
-    @media (max-width: 1024px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } }
+    .blog-item h2 a:hover { color: var(--color-accent-dark); text-decoration: none; }
   </style>
 </head>
 
@@ -93,7 +112,37 @@
       <div class="container container-narrow">
         <ul class="blog-list">
           <li class="blog-item">
-            <p class="blog-meta">July 5, 2026 — Custom Software</p>
+            <p class="blog-meta">August 8, 2026 — Custom Software</p>
+            <h2><a href="custom-software-cost-kenya.html">How Much Does Custom Software Cost in Kenya?</a></h2>
+            <p>A practical breakdown of what drives custom software prices in Kenya, the typical budget ranges for web and mobile apps, and how to keep your first version affordable.</p>
+            <a href="custom-software-cost-kenya.html" class="service-link">Read article →</a>
+          </li>
+          <li class="blog-item">
+            <p class="blog-meta">August 8, 2026 — Water &amp; Utilities</p>
+            <h2><a href="water-utility-billing-software.html">Water Utility Billing Software: From Paper Meters to Digital Collections</a></h2>
+            <p>How African water utilities are replacing manual meter reading and paper billing with digital platforms — and what to look for when choosing billing software.</p>
+            <a href="water-utility-billing-software.html" class="service-link">Read article →</a>
+          </li>
+          <li class="blog-item">
+            <p class="blog-meta">August 8, 2026, System Integration</p>
+            <h2><a href="mobile-money-integration.html">Integrating M-Pesa and Mobile Money Into Your Business Software</a></h2>
+            <p>What integrating M-Pesa, Airtel Money, and MTN MoMo into your software actually involves, transaction states, reconciliation, and planning the first integration.</p>
+            <a href="mobile-money-integration.html" class="service-link">Read article →</a>
+          </li>
+          <li class="blog-item">
+            <p class="blog-meta">August 8, 2026, Construction &amp; Field Ops</p>
+            <h2><a href="construction-project-management-software.html">Construction Project Management Software for Field Teams</a></h2>
+            <p>Spreadsheets don't survive contact with a construction site. What field-first project management software should do, and what to look for when choosing it.</p>
+            <a href="construction-project-management-software.html" class="service-link">Read article →</a>
+          </li>
+          <li class="blog-item">
+            <p class="blog-meta">August 8, 2026, Choosing a partner</p>
+            <h2><a href="choosing-software-development-partner-africa.html">How to Choose a Software Development Partner in East Africa</a></h2>
+            <p>The questions that actually separate good development partners from bad ones, from a team that has been doing this for 12+ years.</p>
+            <a href="choosing-software-development-partner-africa.html" class="service-link">Read article →</a>
+          </li>
+          <li class="blog-item">
+            <p class="blog-meta">July 5, 2026, Custom Software</p>
             <h2><a href="why-invest-custom-software.html">Why Invest in Custom Software Development</a></h2>
             <p>Off-the-shelf software can get a business started quickly, but there comes a point where generic tools start limiting growth. Custom software becomes the better investment when workflows, customers, or compliance requirements no longer fit a one-size-fits-all product.</p>
             <a href="why-invest-custom-software.html" class="service-link">Read article →</a>
@@ -105,7 +154,7 @@
     <section class="section section-dark text-center">
       <div class="container container-narrow">
         <h2 class="text-white">Want to talk through an idea?</h2>
-        <p class="text-white" style="opacity: 0.8; margin-bottom: var(--space-8);">We help businesses decide whether custom software is the right move and plan a practical first phase.</p>
+        <p class="text-white-muted mb-8">We help businesses decide whether custom software is the right move and plan a practical first phase.</p>
         <a href="../contact.html" class="btn btn-light btn-large">Get in touch</a>
       </div>
     </section>
@@ -115,39 +164,42 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="footer-brand">Saharasoft Solutions</div>
-          <p style="color: rgba(248, 250, 252, 0.7); font-size: var(--text-sm); max-width: 320px;">
-            Custom software, product design, and system integration for African businesses.
+          <p class="footer-brand">Saharasoft Solutions</p>
+          <p class="footer-blurb">Custom software, product design, and system integration for African businesses.</p>
+          <p class="footer-contact">
+            <a href="mailto:nelson@saharasoftsolutions.com">nelson@saharasoftsolutions.com</a><br />
+            <a href="tel:+254721137000">+254 721 137000</a><br />
+            <span class="footer-location">Nairobi, Kenya</span>
           </p>
         </div>
         <div class="footer-col">
-          <h3 class="footer-col-title">Company</h3>
+          <p class="footer-col-title">Company</p>
           <ul>
             <li><a href="../about.html">About</a></li>
             <li><a href="../software-development-services.html">Services</a></li>
-            <li><a href="../case-studies/index.html">Case Studies</a></li>
             <li><a href="../contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3 class="footer-col-title">Products</h3>
+          <p class="footer-col-title">Products</p>
           <ul>
             <li><a href="https://arbecapp.saharasoftsolutions.com">Arbec</a></li>
             <li><a href="https://tallydue.com">TallyDue</a></li>
             <li><a href="https://inbuildr.com">Inbuildr</a></li>
+            <li><a href="https://getbaylink.com">Baylink</a></li>
             <li><a href="../products/index.html">All products</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3 class="footer-col-title">Resources</h3>
+          <p class="footer-col-title">Resources</p>
           <ul>
-            <li><a href="../pricing.md">Pricing</a></li>
-            <li><a href="../products.md">Product catalog</a></li>
-            <li><a href="../llms.txt">AI overview</a></li>
+            <li><a href="../pricing.html">Pricing</a></li>
+            <li><a href="./index.html">Blog</a></li>
+            <li><a href="../case-studies/index.html">Case Studies</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h3 class="footer-col-title">Legal</h3>
+          <p class="footer-col-title">Legal</p>
           <ul>
             <li><a href="../webdeveloper/terms_privacy_miradiapp.html">Inbuildr Privacy Policy</a></li>
             <li><a href="../webdeveloper/terms_privacy_watermeter.html">TallyDue Privacy Policy</a></li>

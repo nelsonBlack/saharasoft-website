@@ -33,15 +33,21 @@ Saharasoft Solutions is a custom software development company based in Nairobi, 
 
 ## Key links
 
-- Home: https://saharasoft.org/
-- Services: https://saharasoft.org/software-development-services.html
-- Products: https://saharasoft.org/products/index.html
-- Case studies: https://saharasoft.org/case-studies/index.html
-- About: https://saharasoft.org/about.html
-- Contact: https://saharasoft.org/contact.html
-- Blog: https://saharasoft.org/blog/index.html
-- Pricing: https://saharasoft.org/pricing.md
-- Product catalog: https://saharasoft.org/products.md
+- [Home](https://saharasoft.org/)
+- [Services](https://saharasoft.org/software-development-services.html)
+- [Products](https://saharasoft.org/products/index.html)
+- [Case studies](https://saharasoft.org/case-studies/index.html)
+- [About](https://saharasoft.org/about.html)
+- [Contact](https://saharasoft.org/contact.html)
+- [Blog](https://saharasoft.org/blog/index.html)
+- [Pricing](https://saharasoft.org/pricing.html)
+
+## Notable case studies
+
+- [TallyDue (water utility billing)](https://saharasoft.org/case-studies/tallydue-water-utility.html)
+- [Arbec (conference management)](https://saharasoft.org/case-studies/arbec-conference-platform.html)
+- [Inbuildr (construction field ops)](https://saharasoft.org/case-studies/inbuildr-construction-operations.html)
+- [Baylink (logistics)](https://saharasoft.org/case-studies/baylink-logistics-platform.html)
 
 ## Contact
 
