@@ -62,3 +62,13 @@ jobs:
           curl -s -o /dev/null -w "%{http_code} -> %{redirect_url}\n" https://www.saharasoft.org/
           echo "apex headers:"
           curl -sI https://saharasoft.org/ | grep -iE "HTTP|strict-transport|x-content-type|referrer" || true
+
+      - name: On-box diagnostics
+        run: |
+          ssh vps 'echo "=== server public IP ==="; curl -s -m 5 ifconfig.me || echo unknown; echo
+            echo "=== who owns 80/443 ==="; ss -tlnp | grep -E ":80 |:443 " || true
+            echo "=== caddy containers ==="; docker ps --format "{{.Names}} {{.Ports}}" | grep -i caddy || true
+            echo "=== local Host-based tests ==="
+            echo -n "http www (expect 308): "; curl -s -o /dev/null -w "%{http_code}\n" -H "Host: www.saharasoft.org" http://127.0.0.1/
+            echo -n "https apex HSTS: "; curl -skI -H "Host: saharasoft.org" https://127.0.0.1/ | grep -i strict-transport || echo "MISSING"
+            echo "=== patched block now ==="; CADDY=$(docker ps -qf "name=caddy_prod"); docker exec "$CADDY" awk "/^saharasoft.org/{f=1} f{print} f&&/^}/{exit}" /etc/caddy/Caddyfile | head -8'
