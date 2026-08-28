@@ -70,5 +70,7 @@ jobs:
             echo "=== caddy containers ==="; docker ps --format "{{.Names}} {{.Ports}}" | grep -i caddy || true
             echo "=== local Host-based tests ==="
             echo -n "http www (expect 308): "; curl -s -o /dev/null -w "%{http_code}\n" -H "Host: www.saharasoft.org" http://127.0.0.1/
-            echo -n "https apex HSTS: "; curl -skI -H "Host: saharasoft.org" https://127.0.0.1/ | grep -i strict-transport || echo "MISSING"
-            echo "=== patched block now ==="; CADDY=$(docker ps -qf "name=caddy_prod"); docker exec "$CADDY" awk "/^saharasoft.org/{f=1} f{print} f&&/^}/{exit}" /etc/caddy/Caddyfile | head -8'
+            echo -n "https apex HSTS (SNI-correct): "; curl -skI --resolve saharasoft.org:443:127.0.0.1 https://saharasoft.org/ | grep -i strict-transport || echo "MISSING"
+            echo "=== live admin-api config: HSTS present? ==="; docker exec caddy_prod wget -qO- http://127.0.0.1:2019/config/ 2>/dev/null | grep -c "Strict-Transport-Security" || echo 0
+            echo "=== live admin-api config: www redir present? ==="; docker exec caddy_prod wget -qO- http://127.0.0.1:2019/config/ 2>/dev/null | grep -c "www.saharasoft.org" || echo 0
+            echo "=== patched block now ==="; CADDY=$(docker ps -qf "name=caddy_prod"); docker exec "$CADDY" awk "/^saharasoft.org/{f=1} f{print} f&&/^}/{exit}" /etc/caddy/Caddyfile'
