@@ -46,16 +46,19 @@ jobs:
             python3 /tmp/patch_caddy.py "$CONF"
 
             echo "=== inode-drift check: container view vs host file ==="
-            echo -n "host file HSTS count: ";      grep -c "Strict-Transport-Security" "$CONF" || echo 0
-            echo -n "container view HSTS count: "; docker exec "$CADDY" grep -c "Strict-Transport-Security" /etc/caddy/Caddyfile || echo 0
+            echo -n "host file HSTS count: ";      grep -c "Strict-Transport-Security" "$CONF" || true
+            echo -n "container view HSTS count: "; docker exec "$CADDY" grep -c "Strict-Transport-Security" /etc/caddy/Caddyfile || true
 
             IMAGE=$(docker inspect "$CADDY" --format "{{.Config.Image}}")
-            if docker run --rm -v "$CONF":/tmp/C:ro "$IMAGE" caddy validate --config /tmp/C --adapter caddyfile 2>&1 | tail -1 | grep -q "Valid configuration"; then
+            echo "image: $IMAGE"
+            if docker run --rm --entrypoint caddy -v "$CONF":/tmp/C:ro "$IMAGE" validate --config /tmp/C --adapter caddyfile 2>&1 | tail -3 | grep -q "Valid configuration"; then
               echo "host file valid — restarting container to re-resolve bind mount"
               docker restart "$CADDY" && echo RESTARTED
               sleep 4
             else
-              echo "VALIDATION FAILED - rolling back"
+              echo "VALIDATION FAILED - full output:"
+              docker run --rm --entrypoint caddy -v "$CONF":/tmp/C:ro "$IMAGE" validate --config /tmp/C --adapter caddyfile 2>&1 | tail -5
+              echo "rolling back"
               cp "$CONF.bak.20260828-seo" "$CONF"
               exit 1
             fi
