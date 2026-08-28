@@ -7,6 +7,9 @@ jobs:
   patch:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Setup SSH
         env:
           SERVER_IP: ${{ secrets.SERVER_IP }}
@@ -31,43 +34,16 @@ jobs:
         run: |
           ssh vps 'CADDY=$(docker ps -qf "name=caddy_prod"); docker exec "$CADDY" awk "/^saharasoft.org/{f=1} f{print} f&&/^}/{exit}" /etc/caddy/Caddyfile'
 
-      - name: Patch Caddyfile (backup, patch, validate, reload-or-rollback)
+      - name: Backup, patch, validate, reload-or-rollback
         run: |
+          set -euo pipefail
+          scp -q .github/scripts/patch_caddy.py vps:/tmp/patch_caddy.py
           ssh vps 'set -e
             CADDY=$(docker ps -qf "name=caddy_prod")
             CONF=$(docker inspect "$CADDY" --format "{{range .Mounts}}{{if eq .Destination \"/etc/caddy/Caddyfile\"}}{{.Source}}{{end}}{{end}}")
             echo "Live config source: $CONF"
             cp "$CONF" "$CONF.bak.20260828-seo"
-            python3 - <<PYEOF
-import re
-
-path = "'"$CONF"'"
-s = open(path).read()
-
-block_re = re.compile(r"(?ms)^(saharasoft\.org[^\n]*\{)\n(.*?)^\}")
-m = block_re.search(s)
-assert m, "saharasoft.org block not found"
-if "Strict-Transport-Security" in m.group(2):
-    print("already patched, nothing to do")
-    raise SystemExit(0)
-
-opener, body = m.group(1), m.group(2)
-redir = "    @www host www.saharasoft.org\n    redir @www https://saharasoft.org{uri} permanent\n\n"
-headers = (
-    "\n    header {\n"
-    "        Strict-Transport-Security \"max-age=31536000; includeSubDomains\"\n"
-    "        X-Content-Type-Options \"nosniff\"\n"
-    "        X-Frame-Options \"DENY\"\n"
-    "        Referrer-Policy \"strict-origin-when-cross-origin\"\n"
-    "        Permissions-Policy \"camera=(), microphone=(), geolocation=()\"\n"
-    "        -Server\n"
-    "    }\n"
-)
-patched = opener + "\n" + redir + body.rstrip("\n") + "\n" + headers + "}"
-s = s[: m.start()] + patched + s[m.end():]
-open(path, "w").write(s)
-print("patched OK")
-PYEOF
+            python3 /tmp/patch_caddy.py "$CONF"
             if docker exec "$CADDY" caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile 2>&1 | grep -q "Valid configuration"; then
               docker exec "$CADDY" caddy reload --config /etc/caddy/Caddyfile --adapter caddyfile && echo "RELOADED-OK"
             else
@@ -75,6 +51,7 @@ PYEOF
               cp "$CONF.bak.20260828-seo" "$CONF"
               exit 1
             fi
+            rm -f /tmp/patch_caddy.py
           '
 
       - name: Verify from runner
