@@ -16,9 +16,9 @@ Saharasoft Solutions is a custom software development company based in Nairobi, 
 | TallyDue | https://tallydue.com | Water & Utilities |
 | Inbuildr | https://inbuildr.com | Productivity / Construction |
 | Baylink | https://getbaylink.com | Logistics & Transport |
-| GarageOS | https://staging-garage.saharasoft.org | Fleet / Garage Operations |
-| Realator | https://realator.api.saharasoft.org | Real Estate |
-| Courier | https://courier.saharasoft.org | Logistics & Transport |
+| GarageOS | In private development | Fleet / Garage Operations |
+| Realator | API in private development | Real Estate |
+| Courier | In private development | Logistics & Transport |
 | Messaging | https://messaging.prod.saharasoftsolutions.com | Communications |
 | LakeVictoria100 | https://lakevictoria100.com | Events / Community |
 | Documenter | https://tools.saharasoftsolutions.com | Productivity / Developer Tools |
@@ -38,6 +38,8 @@ Saharasoft Solutions is a custom software development company based in Nairobi, 
 - [Products](https://saharasoft.org/products/index.html)
 - [Case studies](https://saharasoft.org/case-studies/index.html)
 - [About](https://saharasoft.org/about.html)
+- [Pricing](https://saharasoft.org/pricing.html)
+- [Contact](https://saharasoft.org/contact.html)
 - [Contact](https://saharasoft.org/contact.html)
 - [Blog](https://saharasoft.org/blog/index.html)
 - [Pricing](https://saharasoft.org/pricing.html)

@@ -1,0 +1,280 @@
+{
+  "summary": {
+    "health_score": 75,
+    "business_type": "Professional services — custom software development agency (Nairobi, KE; serving Africa/worldwide)",
+    "top_findings": [
+      "Cost blog post contains no prices while pricing.html promises ranges — both fail the cost query",
+      "Zero human authorship/E-E-A-T: Organization-only bylines, anonymous team cards, no LinkedIn",
+      "Homepage duplicates the entire products grid verbatim (cannibalization)",
+      "Meta descriptions missing on 3 pages including the head-term services page (~355 words, thin)",
+      "Homepage LCP is an 859 KB uncompressed PNG hero",
+      "Head-term services page thin (~355 words) — since expanded to 823"
+    ],
+    "quick_wins": [
+      "Add KES ranges to the cost post",
+      "Convert hero-collage.png and other >300 KB PNGs to WebP/AVIF",
+      "Delete 307 orphan legacy images (~27.9 MB) + .DS_Store/.db junk",
+      "Add Person authors with LinkedIn sameAs to blog schema"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 85,
+      "what_works": [
+        "HTTPS with 308 redirects (Caddy)",
+        "robots.txt with explicit AI-crawler policy; sitemap declared",
+        "sitemap.xml exactly matches the 19 public pages; 404 excluded",
+        "Unique canonicals on every page",
+        "Real HTTP 404 with custom page (no soft-404)",
+        "No internal orphan pages; blog posts cross-link contextually",
+        "Scripts deferred; single stylesheet"
+      ],
+      "findings": [
+        {
+          "title": "www is a live duplicate host",
+          "severity": "Medium",
+          "description": "https://www.saharasoft.org/ serves 200 with full content; http://www redirects to https://www, never to apex. Only canonical tags dedupe.",
+          "recommendation": "Add 308 www→apex redirect in Caddy."
+        },
+        {
+          "title": "No security headers",
+          "severity": "Medium",
+          "description": "No HSTS, X-Content-Type-Options, Referrer-Policy, X-Frame-Options, or CSP in live response headers.",
+          "recommendation": "Add baseline headers in Caddyfile."
+        },
+        {
+          "title": "Deploy hygiene",
+          "severity": "Low",
+          "description": "6 .DS_Store and 13 .db files inside images/ are deployed.",
+          "recommendation": "Purge and add deploy ignore rules."
+        }
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 55,
+      "what_works": [
+        "Verifiable product evidence: 10 named live products with real domains",
+        "Consistent NAP on every page; ProfessionalService schema with geo",
+        "Local-market specificity AI engines can quote (M-Pesa, water-utility revenue gap)",
+        "Water-utility internal-link cluster (blog ↔ case study ↔ pricing)",
+        "Dated posts with time elements and datePublished/dateModified"
+      ],
+      "findings": [
+        {
+          "title": "Cost post refuses to answer the cost query",
+          "severity": "High",
+          "description": "'What projects cost in Kenya' section has no numbers; pricing.html promises 'the ranges Kenyan projects typically fall into' in that exact post.",
+          "recommendation": "Publish real KES bands/tables; target 1,200+ words."
+        },
+        {
+          "title": "No human E-E-A-T",
+          "severity": "High",
+          "description": "All bylines are 'By Saharasoft Solutions'; team grid has no surnames, credentials, or LinkedIn.",
+          "recommendation": "Named authors with bios + Person schema + LinkedIn sameAs."
+        },
+        {
+          "title": "Anonymized, metric-free flagship case study",
+          "severity": "High",
+          "description": "TallyDue case study: 'Client: A water utility in Kenya', one vague metric, no quote/scale/timeframe; text reused verbatim on homepage.",
+          "recommendation": "Add client identity, hard metrics, quote."
+        },
+        {
+          "title": "Thin money pages",
+          "severity": "High",
+          "description": "services ~355 words for head term; why-invest post ~269 generic words; products hub ~200 (fully duplicated on homepage); case-studies hub ~213.",
+          "recommendation": "Expand services to 800–1,000 words; fix or fold why-invest."
+        },
+        {
+          "title": "Three cannibalization pairs",
+          "severity": "Medium",
+          "description": "index↔products (identical grid), index↔services (head intent), pricing↔cost post (same query, no numbers on either).",
+          "recommendation": "Differentiate intents; homepage shows selected work only."
+        },
+        {
+          "title": "No citable statistics",
+          "severity": "Medium",
+          "description": "Only numbers site-wide are unsubstantiated '90+/8+/12+' and 'days instead of weeks'.",
+          "recommendation": "Publish stat-bearing content."
+        },
+        {
+          "title": "No FAQ sections or FAQPage schema",
+          "severity": "Medium",
+          "description": "Zero FAQ content despite FAQ-shaped pages (pricing, cost, services).",
+          "recommendation": "Add FAQs with FAQPage schema."
+        }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 85,
+      "what_works": [
+        "Unique titles on all 19 pages; exactly 1 H1 per page everywhere",
+        "Complete OG (10 tags) + Twitter (4 tags) + favicon + lang=en on all sampled pages"
+      ],
+      "findings": [
+        {
+          "title": "Meta descriptions all present (audit correction)",
+          "severity": "Info",
+          "description": "Initial audit reported 3 missing descriptions; they exist in multi-line meta tags. Regex corrected.",
+          "recommendation": "No action needed."
+        },
+        {
+          "title": "4 overlong titles",
+          "severity": "Medium",
+          "description": "105/86/82/75 chars (water post, mobile-money post, partner post, homepage) will truncate in SERPs.",
+          "recommendation": "Trim to <65 chars."
+        }
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 80,
+      "what_works": [
+        "Valid JSON-LD on 18/19 pages, zero invalid blocks",
+        "Correct type mapping: Organization/WebSite/ProfessionalService, Blog/BlogPosting (dates), Article/CollectionPage, ContactPage, ItemList",
+        "ProfessionalService includes geo, areaServed, priceRange"
+      ],
+      "findings": [
+        {
+          "title": "Organization-as-author + og-image-as-logo",
+          "severity": "Medium",
+          "description": "All BlogPosting authors are Organization; publisher logo is the 1200x630 og-image.jpg.",
+          "recommendation": "Person authors; dedicated square logo."
+        },
+        {
+          "title": "Missing FAQPage and BreadcrumbList",
+          "severity": "Medium",
+          "description": "No FAQ schema anywhere; no breadcrumbs on nested pages.",
+          "recommendation": "Add both."
+        },
+        {
+          "title": "Sparse Organization enrichment",
+          "severity": "Low",
+          "description": "sameAs only lists saharasoftsolutions.com; address lacks street/postal code.",
+          "recommendation": "Add LinkedIn/GitHub sameAs, full address, logo."
+        }
+      ]
+    },
+    {
+      "name": "Performance (CWV, static estimate — no lab data)",
+      "score": 75,
+      "what_works": [
+        "Homepage ~319 KB total (HTML+CSS+JS+12 images, uncompressed)",
+        "No render-blocking JS; one stylesheet"
+      ],
+      "findings": [
+        {
+          "title": "859 KB PNG homepage hero (LCP risk)",
+          "severity": "Info",
+          "description": "CORRECTED: hero-collage.png was an unreferenced orphan; the site serves hero-collage.webp (73KB). Referenced images total 1.09MB, max 90KB. Issue was deploy bloat, not page weight.",
+          "recommendation": "Convert to WebP/AVIF with fallback."
+        },
+        {
+          "title": "No field CWV data",
+          "severity": "Info",
+          "description": "Lighthouse/CrUX unavailable in this environment; score is a static estimate.",
+          "recommendation": "Connect GSC/CrUX monitoring."
+        }
+      ]
+    },
+    {
+      "name": "AI Search Readiness",
+      "score": 75,
+      "what_works": [
+        "robots.txt explicitly allows GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended",
+        "Comprehensive structured llms.txt with products table and key links",
+        "Quotable positioning statements with local specificity"
+      ],
+      "findings": [
+        {
+          "title": "Staging URLs in llms.txt",
+          "severity": "Medium",
+          "description": "Lists staging-garage.saharasoft.org, realator.api.saharasoft.org, courier.saharasoft.org — LLM-facing manifest points at non-production hosts.",
+          "recommendation": "Remove or replace with production URLs."
+        },
+        {
+          "title": "Nothing to cite",
+          "severity": "Medium",
+          "description": "No statistics, no named authors, cost post withholds the numbers its query demands.",
+          "recommendation": "Publish concrete figures and named expertise."
+        }
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 70,
+      "what_works": [
+        "Zero missing or empty alt attributes across all 19 pages",
+        "Correct lazy-loading of below-fold galleries; case-study LCP images eager"
+      ],
+      "findings": [
+        {
+          "title": "Legacy format for hero/product images",
+          "severity": "Medium",
+          "description": "194 PNG vs 36 WebP on disk; referenced heavies are raw PNG/JPG up to 1MB+.",
+          "recommendation": "Convert referenced images >300KB to WebP/AVIF."
+        },
+        {
+          "title": "307 orphan images (~27.9 MB) in deploy",
+          "severity": "Low",
+          "description": "Legacy template leftovers (features_*, slide-home-*, church_box_*, shop_*) plus .DS_Store/.db files.",
+          "recommendation": "Delete from repo/deploy."
+        }
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Critical Fixes",
+        "timeframe": "Week 1",
+        "items": [
+          "Add KES ranges to cost post (fix pricing.html promise)",
+          "Add 3 missing meta descriptions",
+          "308 www→apex redirect",
+          "WebP/AVIF hero + >300KB images",
+          "De-duplicate homepage products grid"
+        ]
+      },
+      {
+        "name": "Phase 2: High-Impact Improvements",
+        "timeframe": "Weeks 2-3",
+        "items": [
+          "Human E-E-A-T: named authors, bios, LinkedIn, Person schema",
+          "Hard metrics + client identity in TallyDue case study",
+          "Expand services page to 800-1,000 words",
+          "Fix or fold why-invest post",
+          "Security headers in Caddy"
+        ]
+      },
+      {
+        "name": "Phase 3: Content & Authority",
+        "timeframe": "Month 2",
+        "items": [
+          "FAQ sections + FAQPage schema on pricing/services/cost",
+          "BreadcrumbList schema",
+          "Enrich Organization schema (sameAs, address, logo)",
+          "Publish 2-4 statistic-bearing posts",
+          "Shorten 4 overlong titles",
+          "Clean staging URLs out of llms.txt"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring & Iteration",
+        "timeframe": "Ongoing",
+        "items": [
+          "Delete 307 orphan images + junk files",
+          "Set up GSC + CrUX/Lighthouse monitoring",
+          "Keep sitemap lastmod honest",
+          "Quarterly re-audit"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}

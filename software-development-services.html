@@ -66,6 +66,47 @@
       }
     </script>
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do you work with clients outside Kenya?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We are based in Nairobi and work with clients across Africa and worldwide. Day-to-day collaboration runs on WhatsApp, video calls, and shared project boards, so time zone overlap is rarely a problem for our markets."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you take over an existing codebase?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We start with a short technical audit — code quality, infrastructure, deployment pipeline, and known risks — then agree on a stabilization plan before adding new features."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you price a project?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every project starts with a paid discovery sprint that produces requirements, wireframes, and a fixed build quote. Fixed-price for well-scoped work; dedicated teams for evolving products. See our pricing and engagement models page for details."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We stay on for hosting, monitoring, support, and iterative improvements. As a planning figure, ongoing support and evolution typically runs 10–20% of the original build cost per year, sized to how fast your product is changing."
+            }
+          }
+        ]
+      }
+    </script>
+
     <link rel="preload" href="css/fonts/space-grotesk-500.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="css/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="css/design-system.css" />
@@ -107,23 +148,6 @@
         margin-bottom: var(--space-3);
       }
     </style>
-
-    <!-- GA4: paste your Measurement ID (G-84X42E5J4V) to enable analytics -->
-    <script>
-      (function () {
-        var GA_ID = 'G-84X42E5J4V';
-        if (GA_ID.indexOf('XXXX') === -1) {
-          var s = document.createElement('script');
-          s.async = true;
-          s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-          document.head.appendChild(s);
-          window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
-          gtag('js', new Date());
-          gtag('config', GA_ID);
-        }
-      })();
-    </script>
   </head>
   <body>
     <header class="site-header" role="banner">
@@ -201,6 +225,15 @@
                 tool, a customer portal, or a SaaS platform, our team designs
                 architecture that can grow with your user base.
               </p>
+              <p>
+                Typical builds include admin back offices with role-based
+                access, customer dashboards with reporting and exports, booking
+                and scheduling systems, and multi-tenant SaaS products. Every
+                web application ships with a deployment pipeline, monitoring,
+                and documentation — so it keeps working after we hand it over.
+                See the <a href="case-studies/baylink-logistics-platform.html">Baylink
+                logistics platform</a> for a representative build.
+              </p>
             </article>
 
             <article class="card">
@@ -211,6 +244,16 @@
                 performance, offline usability, and clean user experiences for
                 field teams, customers, and internal staff.
               </p>
+              <p>
+                Because much of our work serves field operations, we design
+                for African network conditions from day one: offline data
+                capture with background sync, low-bandwidth image handling,
+                and graceful degradation when connectivity drops. We handle
+                app store publishing and updates for both Google Play and the
+                App Store. The <a href="case-studies/tallydue-water-utility.html">TallyDue
+                water utility case study</a> shows this in practice — field
+                agents reading meters on phones that sync when signal returns.
+              </p>
             </article>
 
             <article class="card">
@@ -219,6 +262,14 @@
                 Great software starts with clear design. We run user research,
                 wireframing, and prototyping sessions to make sure the final
                 product is intuitive and aligned with business goals.
+              </p>
+              <p>
+                Design happens before engineering for a reason: a clickable
+                prototype tested with real users kills the wrong features
+                while they are still cheap to remove. That is the cheapest
+                cost control available on a software project, and it is why
+                <a href="pricing.html">every engagement of ours starts with
+                discovery</a> rather than a blank cheque.
               </p>
             </article>
 
@@ -229,40 +280,94 @@
                 tools, CRMs, SMS services, and more — through secure APIs and
                 automated workflows.
               </p>
+              <p>
+                In practice across our portfolio this means mobile money
+                collections and disbursements (M-Pesa paybill and till, Airtel
+                Money, MTN MoMo), bulk SMS notifications for reminders and
+                alerts, accounting and ERP data exchange, and mapping and
+                location services for field logistics. We also design and
+                document internal APIs so your own systems and partners can
+                build on top of them safely.
+              </p>
             </article>
           </div>
 
           <h2 class="section-title">Industries We Serve</h2>
           <p>
-            We have delivered solutions for water utilities, real estate,
-            hospitality, finance, logistics, and healthcare. Our domain
-            experience helps us understand regulatory, operational, and
-            customer-facing requirements quickly.
+            Our domain experience comes from products we operate ourselves, not
+            slideware. We have delivered and run software for water utilities
+            (<a href="case-studies/tallydue-water-utility.html">TallyDue</a>),
+            logistics and transport (<a href="case-studies/baylink-logistics-platform.html">Baylink</a>),
+            construction and field operations (<a href="case-studies/inbuildr-construction-operations.html">Inbuildr</a>),
+            conferences and events (<a href="case-studies/arbec-conference-platform.html">Arbec</a>),
+            and real estate. That operating experience means we arrive already
+            fluent in your regulatory, operational, and customer-facing
+            requirements — and we know what breaks when these systems meet the
+            real world.
           </p>
 
           <h2 class="section-title">Our Development Process</h2>
           <ol class="process-list">
             <li>
               <strong>Discovery</strong> — We learn your business, users, and
-              constraints.
+              constraints, then return requirements, wireframes, and a fixed
+              build quote. See <a href="blog/custom-software-cost-kenya.html">what
+              projects typically cost in Kenya</a> for planning figures.
             </li>
             <li>
               <strong>Design</strong> — We create wireframes and high-fidelity
-              prototypes.
+              prototypes, tested with real users before engineering starts.
             </li>
             <li>
               <strong>Development</strong> — We build in iterative sprints with
-              regular demos.
+              regular demos, so you see working software every few weeks, not
+              a big reveal at the end.
             </li>
             <li>
               <strong>Testing</strong> — We test for functionality, security, and
-              performance.
+              performance, including offline behaviour and low-bandwidth
+              conditions.
             </li>
             <li>
-              <strong>Deployment</strong> — We ship to production and provide
-              ongoing support.
+              <strong>Deployment &amp; support</strong> — We ship to production and
+              stay on for monitoring, maintenance, and iterative improvements
+              after launch.
             </li>
           </ol>
+
+          <h2 class="section-title">Frequently Asked Questions</h2>
+
+          <h3>Do you work with clients outside Kenya?</h3>
+          <p>
+            Yes. We are based in Nairobi and work with clients across Africa
+            and worldwide. Day-to-day collaboration runs on WhatsApp, video
+            calls, and shared project boards, so time zone overlap is rarely a
+            problem for our markets.
+          </p>
+
+          <h3>Can you take over an existing codebase?</h3>
+          <p>
+            Yes. We start with a short technical audit — code quality,
+            infrastructure, deployment pipeline, and known risks — then agree
+            on a stabilization plan before adding new features.
+          </p>
+
+          <h3>How do you price a project?</h3>
+          <p>
+            Every project starts with a paid discovery sprint that produces
+            requirements, wireframes, and a fixed build quote. Fixed-price for
+            well-scoped work; dedicated teams for evolving products. See
+            <a href="pricing.html">pricing and engagement models</a> for the
+            details.
+          </p>
+
+          <h3>What happens after launch?</h3>
+          <p>
+            We stay on for hosting, monitoring, support, and iterative
+            improvements. As a planning figure, ongoing support and evolution
+            typically runs 10–20% of the original build cost per year, sized
+            to how fast your product is changing.
+          </p>
 
           <h2 class="section-title">Explore Our Work</h2>
           <p>

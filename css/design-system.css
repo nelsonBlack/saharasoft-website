@@ -401,6 +401,10 @@ ul, ol {
   grid-column: span 3;
 }
 
+.product-tile-full {
+  grid-column: span 12;
+}
+
 .product-tile-image {
   aspect-ratio: 16 / 10;
   background: var(--color-surface);
