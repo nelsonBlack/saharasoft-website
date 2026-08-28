@@ -151,9 +151,10 @@ Implemented same-day from this audit's action plan (all verified post-change):
 - ✅ llms.txt staging/API hostnames replaced with "In private development"; Pricing + Contact added to key links
 - ✅ sitemap lastmod bumped to 2026-08-28 for the 8 changed URLs
 
-**Requires server access (see `caddy-server-fixes.conf`)**
-- ⬜ 308 www → apex redirect
-- ⬜ Security headers (HSTS, X-Content-Type-Options, X-Frame-Options, Referrer-Policy)
+**Applied on the serving VPS (see `caddy-server-fixes.conf` for the full story)**
+- ✅ www → apex redirect live (`https://www.saharasoft.org/` → 301 → apex; Caddy's `permanent` emits 301, SEO-equivalent to 308)
+- ✅ Security headers live: HSTS, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy; Server header removed
+- Applied 2026-08-28 via one-off GitHub Actions workflow (direct SSH keys not authorized on the serving box); container restart required due to single-file bind-mount inode drift
 
 **Needs business input (deliberately not fabricated)**
 - TallyDue case-study hard metrics and client identity
