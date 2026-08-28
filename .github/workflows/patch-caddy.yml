@@ -51,13 +51,16 @@ jobs:
 
             IMAGE=$(docker inspect "$CADDY" --format "{{.Config.Image}}")
             echo "image: $IMAGE"
-            if docker run --rm --entrypoint caddy -v "$CONF":/tmp/C:ro "$IMAGE" validate --config /tmp/C --adapter caddyfile 2>&1 | tail -3 | grep -q "Valid configuration"; then
+            docker cp "$CONF" "$CADDY:/tmp/patched-C"
+            if docker exec "$CADDY" caddy validate --config /tmp/patched-C --adapter caddyfile 2>&1 | tail -2 | grep -q "Valid configuration"; then
+              docker exec "$CADDY" rm -f /tmp/patched-C
               echo "host file valid — restarting container to re-resolve bind mount"
               docker restart "$CADDY" && echo RESTARTED
               sleep 4
             else
               echo "VALIDATION FAILED - full output:"
-              docker run --rm --entrypoint caddy -v "$CONF":/tmp/C:ro "$IMAGE" validate --config /tmp/C --adapter caddyfile 2>&1 | tail -5
+              docker exec "$CADDY" caddy validate --config /tmp/patched-C --adapter caddyfile 2>&1 | tail -5 || true
+              docker exec "$CADDY" rm -f /tmp/patched-C
               echo "rolling back"
               cp "$CONF.bak.20260828-seo" "$CONF"
               exit 1
