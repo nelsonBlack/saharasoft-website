@@ -109,10 +109,15 @@
   }
 
   function storeConsent(value) {
-    window.localStorage.setItem(CONSENT_KEY, JSON.stringify({
-      version: CONSENT_VERSION,
-      value: value
-    }));
+    try {
+      window.localStorage.setItem(CONSENT_KEY, JSON.stringify({
+        version: CONSENT_VERSION,
+        value: value
+      }));
+      return true;
+    } catch (_) {
+      return false;
+    }
   }
 
   function styles() {
