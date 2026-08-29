@@ -136,22 +136,8 @@
   <link rel="preload" href="../css/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../css/design-system.css" />
 
-  <!-- GA4: paste your Measurement ID (G-84X42E5J4V) to enable analytics -->
-  <script>
-    (function () {
-      var GA_ID = 'G-84X42E5J4V';
-      if (GA_ID.indexOf('XXXX') === -1) {
-        var s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', GA_ID);
-      }
-    })();
-  </script>
+  <!-- Analytics loads only after the visitor grants consent. -->
+  <script src="../js/consent-analytics.js" defer></script>
 
   <style>
     .hero { padding: calc(72px + var(--space-24)) 0 var(--space-24); }
