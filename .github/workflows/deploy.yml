@@ -47,7 +47,9 @@ jobs:
             --exclude='docs/audit' \
             --exclude='theme' \
             --exclude='plugins' \
-            --exclude='js' \
+            --include='js/' \
+            --include='js/consent-analytics.js' \
+            --exclude='js/*' \
             --exclude='css/global.css' \
             --exclude='css/structure.css' \
             --exclude='css/be_style.css' \
