@@ -44,11 +44,14 @@ jobs:
             --exclude='.github' \
             --exclude='.DS_Store' \
             --exclude='.agents' \
+            --exclude='.claude' \
+            --exclude='docs' \
             --exclude='docs/audit' \
             --exclude='theme' \
             --exclude='plugins' \
             --include='js/' \
             --include='js/consent-analytics.js' \
+            --include='js/site.js' \
             --exclude='js/*' \
             --exclude='css/global.css' \
             --exclude='css/structure.css' \
