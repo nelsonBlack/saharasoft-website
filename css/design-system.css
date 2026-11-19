@@ -934,3 +934,4 @@ blockquote {
 
 /* Article titles stay readable inside the 68ch column */
 article h1, .prose h1 { font-size: clamp(2.25rem, 4.6vw, 3.75rem); hyphens: manual; }
+.outcome-box > h2:first-child { margin-top: 0; }
