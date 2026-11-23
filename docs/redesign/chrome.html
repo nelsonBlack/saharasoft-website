@@ -1,0 +1,92 @@
+<!-- Shared chrome for every live page (gallery redesign, 2026-11).
+     Paths below are for a ROOT-level page. For pages in a subfolder (blog/, case-studies/, products/)
+     prefix every relative href/src with ../ exactly like the page's existing links do.
+     Mark the current section's nav link with aria-current="page". -->
+
+<!-- In <head>, after the stylesheet link: -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- First thing in <body> -->
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="Saharasoft Solutions home">
+      <img class="logo-mark" src="images/brand/mark.svg" alt="" width="26" height="26" />
+      Saharasoft
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <a href="products/index.html">Products</a>
+      <a href="software-development-services.html">Services</a>
+      <a href="case-studies/index.html">Case studies</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="blog/index.html">Blog</a>
+      <a class="nav-cta-mobile" href="contact.html">Start a project</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary" href="contact.html">Start a project</a>
+      <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Footer (replaces the whole old <footer class="site-footer">) -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-brand">Saharasoft Solutions</p>
+        <p class="footer-blurb">Custom web and mobile software for African businesses, built and run from Nairobi for more than 12 years.</p>
+        <p class="footer-contact">
+          <a href="https://wa.me/254780137000">WhatsApp +254 780 137000</a><br />
+          <a href="mailto:nelson@saharasoftsolutions.com">nelson@saharasoftsolutions.com</a><br />
+          <span class="footer-location">Nairobi, Kenya</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Company</p>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="software-development-services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Products</p>
+        <ul>
+          <li><a href="https://tallydue.com">TallyDue</a></li>
+          <li><a href="https://inbuildr.com">Inbuildr</a></li>
+          <li><a href="https://arbecapp.saharasoftsolutions.com">Arbec</a></li>
+          <li><a href="https://getbaylink.com">Baylink</a></li>
+          <li><a href="products/index.html">All products</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Resources</p>
+        <ul>
+          <li><a href="case-studies/index.html">Case studies</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Legal</p>
+        <ul>
+          <li><a href="webdeveloper/terms_privacy_miradiapp.html">Inbuildr privacy policy</a></li>
+          <li><a href="webdeveloper/terms_privacy_watermeter.html">TallyDue privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Saharasoft Solutions LTD</p>
+      <p>Serving Africa and the world from Nairobi, Kenya.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Before </body>: replaces every old inline menu-toggle <script> block -->
+<script src="js/site.js" defer></script>

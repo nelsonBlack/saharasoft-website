@@ -49,18 +49,20 @@ Machine-readable product catalog for Saharasoft Solutions.
 
 ---
 
-## Baylink
+## BayLink
 
-- **name**: Baylink
-- **category**: Logistics & Transport
+- **name**: BayLink
+- **category**: Automotive / Technician Network
 - **url**: https://getbaylink.com
-- **description**: Logistics and transport operations platform.
-- **problem**: Logistics providers need visibility into dispatch, routes, and delivery performance.
+- **description**: Professional network connecting independent repair shops and dealerships with verified automotive technicians.
+- **problem**: Shops lose work when bays sit empty and recruiting takes weeks; skilled technicians lack an easy way to find flexible, well-paid shop work.
 - **key_features**:
-  - Dispatch and route management
-  - Driver and vehicle tracking
-  - Delivery status updates
-  - Customer and shipment management
+  - Technician profiles with certifications, document and identity checks
+  - Facility profiles listing bays and equipment
+  - Job posting and matching by specialty
+  - Protected payments on Stripe Connect with automatic release or refund on cancellation
+  - Ratings after every job
+- **case_study**: https://saharasoft.org/case-studies/baylink-logistics-platform.html
 
 ---
 

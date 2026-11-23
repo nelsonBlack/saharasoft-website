@@ -29,7 +29,7 @@ Several Saharasoft products are available as operated services or can be customi
 - **TallyDue** — Water utility billing and management
 - **Arbec** — Event and conference management
 - **Inbuildr** — Construction and project productivity
-- **Baylink** — Logistics and transport operations
+- **BayLink** — Professional network connecting repair shops with automotive technicians
 - **GarageOS** — Fleet and garage operations
 - **Realator** — Real estate data and listings
 - **Courier** — Courier and delivery management

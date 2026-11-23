@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <title>Products & Software We Build | Saharasoft Solutions</title>
-  <meta name="description" content="Live software products Saharasoft Solutions has built for African businesses: water billing, logistics, events, real estate, and operations tools." />
+  <meta name="description" content="Live software products Saharasoft Solutions designs, builds and runs: water billing and property, construction project feeds, conference apps, a scientific survey site and a technician marketplace." />
   <meta name="author" content="Saharasoft Solutions LTD" />
   <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,14 +31,13 @@
     }
   </script>
 
-  <link rel="preload" href="../css/fonts/space-grotesk-500.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="../css/fonts/lato-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="../css/design-system.css" />
 
   <!-- Analytics loads only after the visitor grants consent. -->
   <script src="../js/consent-analytics.js" defer></script>
   <meta property="og:title" content="Products & Software We Build | Saharasoft Solutions" />
-  <meta property="og:description" content="Live software products built for African businesses." />
+  <meta property="og:description" content="Live software products designed, built and run by Saharasoft Solutions." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://saharasoft.org/products/index.html" />
   <meta property="og:site_name" content="Saharasoft Solutions" />
@@ -50,7 +49,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Products & Software We Build | Saharasoft Solutions" />
-  <meta name="twitter:description" content="Live software products built for African businesses." />
+  <meta name="twitter:description" content="Live software products designed, built and run by Saharasoft Solutions." />
   <meta name="twitter:image" content="https://saharasoft.org/images/og-image.jpg" />
 
   <script type="application/ld+json">
@@ -62,256 +61,265 @@
         { "@type": "SoftwareApplication", "name": "Arbec", "applicationCategory": "BusinessApplication", "url": "https://arbecapp.saharasoftsolutions.com" },
         { "@type": "SoftwareApplication", "name": "TallyDue", "applicationCategory": "BusinessApplication", "url": "https://tallydue.com" },
         { "@type": "SoftwareApplication", "name": "Inbuildr", "applicationCategory": "BusinessApplication", "url": "https://inbuildr.com" },
-        { "@type": "SoftwareApplication", "name": "Baylink", "applicationCategory": "BusinessApplication", "url": "https://getbaylink.com" },
-        { "@type": "SoftwareApplication", "name": "GarageOS", "applicationCategory": "BusinessApplication", "url": "https://staging-garage.saharasoft.org" },
-        { "@type": "SoftwareApplication", "name": "Realator", "applicationCategory": "BusinessApplication", "url": "https://realator.api.saharasoft.org" },
-        { "@type": "SoftwareApplication", "name": "Courier", "applicationCategory": "BusinessApplication", "url": "https://courier.saharasoft.org" },
-        { "@type": "SoftwareApplication", "name": "Messaging", "applicationCategory": "BusinessApplication", "url": "https://messaging.prod.saharasoftsolutions.com" },
-        { "@type": "SoftwareApplication", "name": "LakeVictoria100", "applicationCategory": "BusinessApplication", "url": "https://lakevictoria100.com" },
-        { "@type": "SoftwareApplication", "name": "Documenter", "applicationCategory": "DeveloperApplication", "url": "https://tools.saharasoftsolutions.com" }
+        { "@type": "SoftwareApplication", "name": "BayLink", "applicationCategory": "BusinessApplication", "url": "https://getbaylink.com" },
+        { "@type": "SoftwareApplication", "name": "GarageOS", "applicationCategory": "BusinessApplication", "description": "In development" },
+        { "@type": "SoftwareApplication", "name": "Lake Victoria 100", "applicationCategory": "BusinessApplication", "url": "https://lakevictoria100.com" }
       ]
     }
   </script>
-
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <script>document.documentElement.classList.add('js');</script>
   <style>
-    .hero { padding: calc(72px + var(--space-24)) 0 var(--space-24); }
-    .filter-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-3);
-      margin-bottom: var(--space-12);
+    .service-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-border); }
+    .service-list li {
+      display: grid;
+      grid-template-columns: minmax(9rem, 14rem) 1fr;
+      gap: var(--space-2) var(--space-8);
+      padding: var(--space-5) 0;
+      border-bottom: 1px solid var(--color-border);
     }
-    .filter-btn[aria-pressed="true"] {
-      background: var(--color-accent-strong);
-      color: var(--color-white);
-      border-color: var(--color-accent-strong);
-    }
-    .filter-btn[aria-pressed="true"]:hover {
-      background: var(--color-accent-dark);
-      border-color: var(--color-accent-dark);
-    }
-    .product-tile[hidden] {
-      display: none;
-    }
-    .product-tile-image {
-      aspect-ratio: 16 / 10;
-      background: var(--color-surface);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      color: var(--color-muted);
-      font-size: var(--text-sm);
-    }
-    .product-tile-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    .service-list strong { font-family: var(--font-display); font-weight: 700; }
+    .service-list span { color: var(--color-muted); }
+    .services-intro { margin-bottom: var(--space-8); }
+    @media (max-width: 640px) { .service-list li { grid-template-columns: 1fr; } }
   </style>
 </head>
 
 <body>
-  <a class="visually-hidden" href="#main">Skip to main content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a href="../index.html" class="logo">Saharasoft Solutions</a>
-      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-        <a href="./index.html" aria-current="page">Products</a>
+      <a href="../index.html" class="logo" aria-label="Saharasoft Solutions home">
+        <img class="logo-mark" src="../images/brand/mark.svg" alt="" width="26" height="26" />
+        Saharasoft
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main">
+        <a href="../products/index.html" aria-current="page">Products</a>
         <a href="../software-development-services.html">Services</a>
-        <a href="../case-studies/index.html">Case Studies</a>
+        <a href="../case-studies/index.html">Case studies</a>
+        <a href="../pricing.html">Pricing</a>
         <a href="../about.html">About</a>
         <a href="../blog/index.html">Blog</a>
-        <a href="../contact.html">Contact</a>
+        <a class="nav-cta-mobile" href="../contact.html">Start a project</a>
       </nav>
-      <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-nav">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-        </svg>
-      </button>
+      <div class="header-actions">
+        <a class="btn btn-primary" href="../contact.html">Start a project</a>
+        <button class="mobile-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="8" x2="20" y2="8"/><line x1="4" y1="16" x2="20" y2="16"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero bg-surface">
-      <div class="container">
-        <h1 class="hero-title">Products we've built for African businesses.</h1>
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container" data-enter>
+        <h1 id="hero-heading" class="display">Products we design, build <span class="soft">and run.</span></h1>
         <p class="hero-lead">
-          Most of these products are running live today. Each one started with a specific workflow that existing software could not handle.
+          Browse our live products by sector: water billing and property, construction, events and research, and automotive. Every card opens the real product.
         </p>
+        <p class="hero-fact">5 live products · web, iPhone, iPad and Android · built and run from Nairobi</p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section bg-surface" id="library" aria-labelledby="library-heading">
       <div class="container">
-        <div class="filter-bar" role="group" aria-label="Filter products by category">
-          <button class="btn btn-secondary filter-btn" data-filter="all" aria-pressed="true">All</button>
-          <button class="btn btn-secondary filter-btn" data-filter="water" aria-pressed="false">Water & Utilities</button>
-          <button class="btn btn-secondary filter-btn" data-filter="events" aria-pressed="false">Events & Conferences</button>
-          <button class="btn btn-secondary filter-btn" data-filter="logistics" aria-pressed="false">Logistics & Transport</button>
-          <button class="btn btn-secondary filter-btn" data-filter="realestate" aria-pressed="false">Real Estate</button>
-          <button class="btn btn-secondary filter-btn" data-filter="productivity" aria-pressed="false">Productivity</button>
-          <button class="btn btn-secondary filter-btn" data-filter="communications" aria-pressed="false">Communications</button>
+        <div class="section-header-row">
+          <h2 id="library-heading" class="section-title">Browse by sector</h2>
         </div>
 
-        <div class="product-grid" id="product-grid">
-          <article class="product-tile product-tile-large" data-category="events">
-            <a href="https://arbecapp.saharasoftsolutions.com" class="card-link">
-              <div class="product-tile-image">
-                <img src="../images/products/product-arbec.webp" alt="Arbec mobile agenda showing conference sessions" width="1600" height="1000" loading="lazy" />
-              </div>
-              <div class="product-tile-body">
-                <p class="product-tile-meta">Events & Conferences</p>
-                <h3 class="product-tile-title">Arbec</h3>
-                <p class="product-tile-desc">Conference management that replaces spreadsheets, WhatsApp chains, and printed schedules for event organisers and attendees.</p>
-                <span class="text-accent">Visit arbecapp.saharasoftsolutions.com →</span>
-              </div>
-            </a>
-          </article>
+        <div data-tabs>
+          <div class="tabs" role="tablist" aria-label="Sectors">
+            <button class="tab" role="tab" id="tab-all" aria-controls="panel-all" aria-selected="true">All</button>
+            <button class="tab" role="tab" id="tab-water" aria-controls="panel-water" aria-selected="false" tabindex="-1">Water &amp; property</button>
+            <button class="tab" role="tab" id="tab-construction" aria-controls="panel-construction" aria-selected="false" tabindex="-1">Construction</button>
+            <button class="tab" role="tab" id="tab-events" aria-controls="panel-events" aria-selected="false" tabindex="-1">Events &amp; research</button>
+            <button class="tab" role="tab" id="tab-auto" aria-controls="panel-auto" aria-selected="false" tabindex="-1">Automotive</button>
+          </div>
 
-          <article class="product-tile product-tile-large" data-category="water">
-            <a href="https://tallydue.com" class="card-link">
-              <div class="product-tile-image">
-                <img src="../images/products/product-tallydue.webp" alt="TallyDue web dashboard and mobile meter health view" width="1600" height="1000" loading="lazy" />
+          <div class="tab-panel" role="tabpanel" id="panel-all" aria-labelledby="tab-all" tabindex="0">
+            <h3 class="tab-panel-title">All products</h3>
+            <div class="screen-grid">
+              <a class="screen-card is-wide" href="https://tallydue.com">
+                <div class="screen-frame"><img src="../images/products/screens/tallydue-ui-1.webp" alt="TallyDue water billing dashboard with billing cycle progress, collections and anomalies" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><img class="app-icon" src="../images/products/screens/icons/tallydue.webp" alt="" width="36" height="36" loading="lazy" /><span><span class="screen-name">TallyDue · Water billing</span><span class="screen-desc">Meter readings, bills, M-Pesa collections and arrears in one workspace.</span></span></div>
+              </a>
+              <a class="screen-card is-phone" href="https://tallydue.com">
+                <div class="screen-frame"><img src="../images/products/screens/tallydue-phone.webp" alt="TallyDue mobile dashboard showing 20 of 27 meters billed" width="430" height="932" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">TallyDue mobile</span><span class="screen-desc">The same billing cycle on iPhone and Android.</span></span></div>
+              </a>
+              <a class="screen-card is-wide" href="https://inbuildr.com">
+                <div class="screen-frame"><img src="../images/products/screens/inbuildr-desktop.webp" alt="Inbuildr site: give every site update a place your team can find, beside a project feed" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><img class="app-icon" src="../images/products/screens/icons/inbuildr.svg" alt="" width="36" height="36" loading="lazy" /><span><span class="screen-name">Inbuildr · Construction operations</span><span class="screen-desc">Project feed, programme, daily logs, files and reports for every site.</span></span></div>
+              </a>
+              <a class="screen-card is-phone" href="https://inbuildr.com">
+                <div class="screen-frame"><img src="../images/products/screens/inbuildr-phone.webp" alt="Inbuildr mobile project feed with a foundation inspection update and site photo" width="540" height="743" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">Inbuildr on site</span><span class="screen-desc">Crews post updates and photos from the slab.</span></span></div>
+              </a>
+              <a class="screen-card is-phone" href="https://arbecapp.saharasoftsolutions.com">
+                <div class="screen-frame"><img src="../images/products/screens/arbec-phone.webp" alt="Arbec mobile app screen" width="540" height="1100" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">Arbec programme</span><span class="screen-desc">Conference programme on your phone.</span></span></div>
+              </a>
+              <a class="screen-card is-wide" href="https://arbecapp.saharasoftsolutions.com">
+                <div class="screen-frame"><img src="../images/products/screens/arbec-desktop.webp" alt="Arbec conference directory with filters and the featured ARBEC III 2026 conference" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><img class="app-icon" src="../images/products/screens/icons/arbec.webp" alt="" width="36" height="36" loading="lazy" /><span><span class="screen-name">Arbec · Conferences</span><span class="screen-desc">Conference directory, registration and live programme.</span></span></div>
+              </a>
+              <a class="screen-card is-wide" href="https://getbaylink.com">
+                <div class="screen-frame"><img src="../images/products/screens/baylink-desktop.webp" alt="BayLink site: connecting repair shops with technicians who deliver, with a technician search" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><img class="app-icon" src="../images/products/screens/icons/baylink.svg" alt="" width="36" height="36" loading="lazy" /><span><span class="screen-name">BayLink · Technician network</span><span class="screen-desc">A professional network and job marketplace for automotive technicians and repair shops.</span></span></div>
+              </a>
+              <a class="screen-card" href="https://getbaylink.com">
+                <div class="screen-frame"><img src="../images/products/screens/baylink-ui-1.webp" alt="A technician working in a repair bay" width="1184" height="864" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">For repair shops</span><span class="screen-desc">Find technicians when the bays are full.</span></span></div>
+              </a>
+              <a class="screen-card is-wide" href="https://lakevictoria100.com">
+                <div class="screen-frame"><img src="../images/products/screens/lakevictoria100-desktop.webp" alt="Lake Victoria 100 site: One Lake. One Century. One Chance. Centenary Scientific Survey 2027" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><img class="app-icon" src="../images/products/screens/icons/lakevictoria100.svg" alt="" width="36" height="36" loading="lazy" /><span><span class="screen-name">Lake Victoria 100 · Centenary survey</span><span class="screen-desc">The public site of the 2027 Centenary Scientific Survey of Lake Victoria.</span></span></div>
+              </a>
+              <a class="screen-card" href="https://lakevictoria100.com">
+                <div class="screen-frame"><img src="../images/products/screens/lakevictoria100-ui-1.webp" alt="Historic photograph from the Lake Victoria 100 site" width="1200" height="800" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">Lake Victoria 100 · Archive</span><span class="screen-desc">Archive imagery from the survey site.</span></span></div>
+              </a>
+              <a class="screen-card is-half" href="https://tallydue.com">
+                <div class="screen-frame"><img src="../images/products/screens/tallydue-ui-3.webp" alt="TallyDue property portfolio listing occupancy for three properties" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">Rent &amp; property</span><span class="screen-desc">Portfolio occupancy, tenants and invoices.</span></span></div>
+              </a>
+              <a class="screen-card is-half" href="https://tallydue.com">
+                <div class="screen-frame"><img src="../images/products/screens/tallydue-ui-2.webp" alt="TallyDue short-stay new booking form" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">Short-stay bookings</span><span class="screen-desc">Listings, calendars and guest bookings.</span></span></div>
+              </a>
+              <div class="screen-card">
+                <div class="screen-frame"><img src="../images/products/screens/garageos-desktop.webp" alt="GarageOS staging sign-in screen" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">GarageOS · In development</span><span class="screen-desc">An auto-repair business platform, not yet public.</span></span></div>
               </div>
-              <div class="product-tile-body">
-                <p class="product-tile-meta">Water & Utilities</p>
-                <h3 class="product-tile-title">TallyDue</h3>
-                <p class="product-tile-desc">All-in-one platform for water billing, property/rent management, short-stay operations, field readings, payments, and reporting.</p>
-                <span class="text-accent">Visit tallydue.com →</span>
+            </div>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="panel-water" aria-labelledby="tab-water" tabindex="0" hidden>
+            <h3 class="tab-panel-title">Water &amp; property</h3>
+            <div class="screen-grid">
+              <a class="screen-card is-wide" href="https://tallydue.com">
+                <div class="screen-frame"><img src="../images/products/screens/tallydue-ui-1.webp" alt="TallyDue water billing dashboard with billing cycle progress, collections and anomalies" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><img class="app-icon" src="../images/products/screens/icons/tallydue.webp" alt="" width="36" height="36" loading="lazy" /><span><span class="screen-name">TallyDue · Water billing</span><span class="screen-desc">Meter readings, bills, M-Pesa collections and arrears in one workspace.</span></span></div>
+              </a>
+              <a class="screen-card is-phone" href="https://tallydue.com">
+                <div class="screen-frame"><img src="../images/products/screens/tallydue-phone.webp" alt="TallyDue mobile dashboard showing 20 of 27 meters billed" width="430" height="932" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">TallyDue mobile</span><span class="screen-desc">The same billing cycle on iPhone and Android.</span></span></div>
+              </a>
+              <a class="screen-card is-half" href="https://tallydue.com">
+                <div class="screen-frame"><img src="../images/products/screens/tallydue-ui-3.webp" alt="TallyDue property portfolio listing occupancy for three properties" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">Rent &amp; property</span><span class="screen-desc">Portfolio occupancy, tenants and invoices.</span></span></div>
+              </a>
+              <a class="screen-card is-half" href="https://tallydue.com">
+                <div class="screen-frame"><img src="../images/products/screens/tallydue-ui-2.webp" alt="TallyDue short-stay new booking form" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">Short-stay bookings</span><span class="screen-desc">Listings, calendars and guest bookings.</span></span></div>
+              </a>
+              <a class="screen-card is-phone" href="https://tallydue.com">
+                <div class="screen-frame"><img src="../images/products/screens/tallydue-phone-2.webp" alt="TallyDue mobile short-stay screen" width="430" height="932" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">Short stays on mobile</span><span class="screen-desc">Short-stay bookings on iPhone and Android.</span></span></div>
+              </a>
+              <a class="screen-card is-phone" href="https://tallydue.com">
+                <div class="screen-frame"><img src="../images/products/screens/tallydue-phone-3.webp" alt="TallyDue mobile property screen" width="430" height="932" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">Properties on mobile</span><span class="screen-desc">Rent and property on iPhone and Android.</span></span></div>
+              </a>
+            </div>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="panel-construction" aria-labelledby="tab-construction" tabindex="0" hidden>
+            <h3 class="tab-panel-title">Construction</h3>
+            <div class="screen-grid">
+              <a class="screen-card is-wide" href="https://inbuildr.com">
+                <div class="screen-frame"><img src="../images/products/screens/inbuildr-desktop.webp" alt="Inbuildr site: give every site update a place your team can find, beside a project feed" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><img class="app-icon" src="../images/products/screens/icons/inbuildr.svg" alt="" width="36" height="36" loading="lazy" /><span><span class="screen-name">Inbuildr · Construction operations</span><span class="screen-desc">Project feed, programme, daily logs, files and reports for every site.</span></span></div>
+              </a>
+              <a class="screen-card is-phone" href="https://inbuildr.com">
+                <div class="screen-frame"><img src="../images/products/screens/inbuildr-phone.webp" alt="Inbuildr mobile project feed with a foundation inspection update and site photo" width="540" height="743" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">Inbuildr on site</span><span class="screen-desc">Crews post updates and photos from the slab.</span></span></div>
+              </a>
+              <a class="screen-card is-phone" href="https://inbuildr.com">
+                <div class="screen-frame"><img src="../images/products/screens/inbuildr-ui-1.webp" alt="Inbuildr project screen on a phone" width="800" height="1731" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">Project updates</span><span class="screen-desc">Site updates your team can find.</span></span></div>
+              </a>
+            </div>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="panel-events" aria-labelledby="tab-events" tabindex="0" hidden>
+            <h3 class="tab-panel-title">Events &amp; research</h3>
+            <div class="screen-grid">
+              <a class="screen-card is-wide" href="https://arbecapp.saharasoftsolutions.com">
+                <div class="screen-frame"><img src="../images/products/screens/arbec-desktop.webp" alt="Arbec conference directory with filters and the featured ARBEC III 2026 conference" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><img class="app-icon" src="../images/products/screens/icons/arbec.webp" alt="" width="36" height="36" loading="lazy" /><span><span class="screen-name">Arbec · Conferences</span><span class="screen-desc">Conference directory, registration and live programme.</span></span></div>
+              </a>
+              <a class="screen-card is-phone" href="https://arbecapp.saharasoftsolutions.com">
+                <div class="screen-frame"><img src="../images/products/screens/arbec-ui-1.webp" alt="Arbec app session detail for a keynote presentation" width="540" height="1100" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">Arbec app</span><span class="screen-desc">Sessions, rooms and times in the attendee&#39;s pocket.</span></span></div>
+              </a>
+              <a class="screen-card is-wide" href="https://lakevictoria100.com">
+                <div class="screen-frame"><img src="../images/products/screens/lakevictoria100-desktop.webp" alt="Lake Victoria 100 site: One Lake. One Century. One Chance. Centenary Scientific Survey 2027" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><img class="app-icon" src="../images/products/screens/icons/lakevictoria100.svg" alt="" width="36" height="36" loading="lazy" /><span><span class="screen-name">Lake Victoria 100 · Centenary survey</span><span class="screen-desc">The public site of the 2027 Centenary Scientific Survey of Lake Victoria.</span></span></div>
+              </a>
+              <a class="screen-card" href="https://lakevictoria100.com">
+                <div class="screen-frame"><img src="../images/products/screens/lakevictoria100-ui-1.webp" alt="Historic photograph from the Lake Victoria 100 site" width="1200" height="800" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">Lake Victoria 100 · Archive</span><span class="screen-desc">Archive imagery from the survey site.</span></span></div>
+              </a>
+            </div>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="panel-auto" aria-labelledby="tab-auto" tabindex="0" hidden>
+            <h3 class="tab-panel-title">Automotive</h3>
+            <div class="screen-grid">
+              <a class="screen-card is-wide" href="https://getbaylink.com">
+                <div class="screen-frame"><img src="../images/products/screens/baylink-desktop.webp" alt="BayLink site: connecting repair shops with technicians who deliver, with a technician search" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><img class="app-icon" src="../images/products/screens/icons/baylink.svg" alt="" width="36" height="36" loading="lazy" /><span><span class="screen-name">BayLink · Technician network</span><span class="screen-desc">A professional network and job marketplace for automotive technicians and repair shops.</span></span></div>
+              </a>
+              <a class="screen-card" href="https://getbaylink.com">
+                <div class="screen-frame"><img src="../images/products/screens/baylink-ui-1.webp" alt="A technician working in a repair bay" width="1184" height="864" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">For repair shops</span><span class="screen-desc">Find technicians when the bays are full.</span></span></div>
+              </a>
+              <div class="screen-card">
+                <div class="screen-frame"><img src="../images/products/screens/garageos-desktop.webp" alt="GarageOS staging sign-in screen" width="1440" height="900" loading="lazy" /></div>
+                <div class="screen-meta"><span><span class="screen-name">GarageOS · In development</span><span class="screen-desc">An auto-repair business platform, not yet public.</span></span></div>
               </div>
-            </a>
-          </article>
-
-          <article class="product-tile product-tile-small" data-category="productivity">
-            <a href="https://inbuildr.com" class="card-link">
-              <div class="product-tile-image">
-                <img src="../images/products/product-inbuildr-800.webp" alt="Inbuildr construction project management landing page" width="800" height="500" loading="lazy" />
-              </div>
-              <div class="product-tile-body">
-                <p class="product-tile-meta">Productivity / Construction</p>
-                <h3 class="product-tile-title">Inbuildr</h3>
-                <p class="product-tile-desc">Project and operations tracking for construction and field teams.</p>
-              </div>
-            </a>
-          </article>
-
-          <article class="product-tile product-tile-small" data-category="logistics">
-            <a href="https://getbaylink.com" class="card-link">
-              <div class="product-tile-image">
-                <img src="../images/products/product-baylink-800.webp" alt="Baylink professional network for automotive technicians" width="800" height="500" loading="lazy" />
-              </div>
-              <div class="product-tile-body">
-                <p class="product-tile-meta">Logistics & Transport</p>
-                <h3 class="product-tile-title">Baylink</h3>
-                <p class="product-tile-desc">Connects shippers and transporters across African corridors.</p>
-              </div>
-            </a>
-          </article>
-
-          <article class="product-tile product-tile-small" data-category="logistics">
-            <a href="https://staging-garage.saharasoft.org" class="card-link">
-              <div class="product-tile-image">
-                <img src="../images/products/product-garageos.svg" alt="GarageOS product brand card" loading="lazy" />
-              </div>
-              <div class="product-tile-body">
-                <p class="product-tile-meta">Fleet & Garage</p>
-                <h3 class="product-tile-title">GarageOS</h3>
-                <p class="product-tile-desc">Workshop and fleet operations for garages managing multiple vehicles.</p>
-              </div>
-            </a>
-          </article>
-
-          <article class="product-tile product-tile-small" data-category="realestate">
-            <a href="https://realator.api.saharasoft.org" class="card-link">
-              <div class="product-tile-image">
-                <img src="../images/products/product-realator.svg" alt="Realator product brand card" loading="lazy" />
-              </div>
-              <div class="product-tile-body">
-                <p class="product-tile-meta">Real Estate</p>
-                <h3 class="product-tile-title">Realator</h3>
-                <p class="product-tile-desc">Property data and listings API for real-estate businesses.</p>
-              </div>
-            </a>
-          </article>
-
-          <article class="product-tile product-tile-small" data-category="logistics">
-            <a href="https://courier.saharasoft.org" class="card-link">
-              <div class="product-tile-image">
-                <img src="../images/products/product-courier.svg" alt="Courier product brand card" loading="lazy" />
-              </div>
-              <div class="product-tile-body">
-                <p class="product-tile-meta">Logistics</p>
-                <h3 class="product-tile-title">Courier</h3>
-                <p class="product-tile-desc">Last-mile delivery and dispatch management for courier services.</p>
-              </div>
-            </a>
-          </article>
-
-          <article class="product-tile product-tile-small" data-category="communications">
-            <a href="https://messaging.prod.saharasoftsolutions.com" class="card-link">
-              <div class="product-tile-image">
-                <img src="../images/products/product-messaging.svg" alt="Messaging product brand card" loading="lazy" />
-              </div>
-              <div class="product-tile-body">
-                <p class="product-tile-meta">Communications</p>
-                <h3 class="product-tile-title">Messaging</h3>
-                <p class="product-tile-desc">SMS and notification backend used by multiple products.</p>
-              </div>
-            </a>
-          </article>
-
-          <article class="product-tile product-tile-small" data-category="events">
-            <a href="https://lakevictoria100.com" class="card-link">
-              <div class="product-tile-image">
-                <img src="../images/products/product-lakevictoria100-800.webp" alt="LakeVictoria100 centenary scientific survey homepage" width="800" height="500" loading="lazy" />
-              </div>
-              <div class="product-tile-body">
-                <p class="product-tile-meta">Events / Community</p>
-                <h3 class="product-tile-title">LakeVictoria100</h3>
-                <p class="product-tile-desc">Community event platform built around the Lake Victoria 100 race.</p>
-              </div>
-            </a>
-          </article>
-
-          <article class="product-tile product-tile-small" data-category="productivity">
-            <a href="https://tools.saharasoftsolutions.com" class="card-link">
-              <div class="product-tile-image">
-                <img src="../images/products/product-documenter.svg" alt="Documenter product brand card" loading="lazy" />
-              </div>
-              <div class="product-tile-body">
-                <p class="product-tile-meta">Productivity / Developer</p>
-                <h3 class="product-tile-title">Documenter</h3>
-                <p class="product-tile-desc">Internal document generation and developer utilities.</p>
-              </div>
-            </a>
-          </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-dark text-center">
-      <div class="container container-narrow">
-        <h2 class="text-white">Need a custom product?</h2>
-        <p class="text-white-muted mb-8">
-          Tell us what you are building and we will help you plan the right approach.
+    <section class="section" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header-row">
+          <h2 id="services-heading" class="section-title">Platform services we also run</h2>
+        </div>
+        <p class="section-subtitle services-intro">Backend services without a public front end. They power our products and client projects.</p>
+        <ul class="service-list">
+          <li><strong>Realator</strong><span>Property data and listings API.</span></li>
+          <li><strong>Courier</strong><span>Delivery and dispatch backend.</span></li>
+          <li><strong>Messaging</strong><span>SMS and notification backend used by our products.</span></li>
+          <li><strong>Documenter</strong><span>Document generation tools.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section close" aria-labelledby="close-heading">
+      <div class="container">
+        <h2 id="close-heading" class="display">Need something <span class="soft">we haven't built yet?</span></h2>
+        <p class="close-body">
+          Tell us what slows your team down; we will reply with the clearest next step, even if that is not hiring us.
         </p>
-        <a href="../contact.html" class="btn btn-light btn-large">Tell us about your project</a>
+        <div class="hero-actions">
+          <a href="../contact.html" class="btn btn-primary btn-large">Start a project <span class="arrow" aria-hidden="true">→</span></a>
+          <a href="../pricing.html" class="btn btn-secondary btn-large">See pricing</a>
+        </div>
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
           <p class="footer-brand">Saharasoft Solutions</p>
-          <p class="footer-blurb">Custom software, product design, and system integration for African businesses.</p>
+          <p class="footer-blurb">Custom web and mobile software for African businesses, built and run from Nairobi for more than 12 years.</p>
           <p class="footer-contact">
-            <a href="https://wa.me/254780137000">WhatsApp: +254 780 137000</a><br />
+            <a href="https://wa.me/254780137000">WhatsApp +254 780 137000</a><br />
             <a href="mailto:nelson@saharasoftsolutions.com">nelson@saharasoftsolutions.com</a><br />
-            <a href="tel:+254721137000">+254 721 137000</a><br />
             <span class="footer-location">Nairobi, Kenya</span>
           </p>
         </div>
@@ -320,72 +328,42 @@
           <ul>
             <li><a href="../about.html">About</a></li>
             <li><a href="../software-development-services.html">Services</a></li>
+            <li><a href="../pricing.html">Pricing</a></li>
             <li><a href="../contact.html">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <p class="footer-col-title">Products</p>
           <ul>
-            <li><a href="https://arbecapp.saharasoftsolutions.com">Arbec</a></li>
             <li><a href="https://tallydue.com">TallyDue</a></li>
             <li><a href="https://inbuildr.com">Inbuildr</a></li>
+            <li><a href="https://arbecapp.saharasoftsolutions.com">Arbec</a></li>
             <li><a href="https://getbaylink.com">Baylink</a></li>
-            <li><a href="./index.html">All products</a></li>
+            <li><a href="../products/index.html">All products</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <p class="footer-col-title">Resources</p>
           <ul>
-            <li><a href="../pricing.html">Pricing</a></li>
+            <li><a href="../case-studies/index.html">Case studies</a></li>
             <li><a href="../blog/index.html">Blog</a></li>
-            <li><a href="../case-studies/index.html">Case Studies</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <p class="footer-col-title">Legal</p>
           <ul>
-            <li><a href="../webdeveloper/terms_privacy_miradiapp.html">Inbuildr Privacy Policy</a></li>
-            <li><a href="../webdeveloper/terms_privacy_watermeter.html">TallyDue Privacy Policy</a></li>
+            <li><a href="../webdeveloper/terms_privacy_miradiapp.html">Inbuildr privacy policy</a></li>
+            <li><a href="../webdeveloper/terms_privacy_watermeter.html">TallyDue privacy policy</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Saharasoft Solutions LTD. All rights reserved.</p>
+        <p>© 2026 Saharasoft Solutions LTD</p>
         <p>Serving Africa and the world from Nairobi, Kenya.</p>
       </div>
     </div>
   </footer>
 
-  <script>
-    (function () {
-      var toggle = document.querySelector('.mobile-menu-toggle');
-      var nav = document.getElementById('main-nav');
-      if (toggle && nav) {
-        toggle.addEventListener('click', function () {
-          var isOpen = nav.classList.toggle('is-open');
-          toggle.setAttribute('aria-expanded', String(isOpen));
-        });
-      }
-
-      var filters = document.querySelectorAll('[data-filter]');
-      var items = document.querySelectorAll('.product-tile');
-      filters.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-          var filter = btn.getAttribute('data-filter');
-          filters.forEach(function (b) {
-            b.setAttribute('aria-pressed', 'false');
-          });
-          btn.setAttribute('aria-pressed', 'true');
-          items.forEach(function (item) {
-            if (filter === 'all' || item.getAttribute('data-category') === filter) {
-              item.hidden = false;
-            } else {
-              item.hidden = true;
-            }
-          });
-        });
-      });
-    })();
-  </script>
+  <script src="../js/site.js" defer></script>
 </body>
 </html>
